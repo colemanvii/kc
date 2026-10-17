@@ -1,0 +1,137 @@
+/*
+ * The Arrival — composition.
+ *
+ * --u is CSS px per master-artwork px. It is chosen so the drawn ink (KC, balloons
+ * and ground line: ~694 × 827 master px) fills at most 84% of the width and 58% of
+ * the height, never enlarged beyond the master. The ink's centre sits at the
+ * optical centre of the viewport; everything else is the drawing's own paper.
+ */
+
+:root {
+  --paper: rgb(239 222 201);
+  --graphite: rgb(112 102 96);
+  --ink-w: 694;
+  --ink-h: 827;
+  --ink-cx: 815;
+  --ink-cy: 768;
+  --u: min(calc(84vw / var(--ink-w)), calc(58svh / var(--ink-h)), 1px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--paper);
+  background-image: url('/little-kc/derived/paper.jpg');
+  background-size: calc(var(--u) * 768) auto;
+  color: var(--graphite);
+  font: 400 13px/1.4 ui-serif, Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.arrival {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.stage {
+  position: absolute;
+  left: calc(50vw - var(--ink-cx) * var(--u));
+  top: calc(49svh - var(--ink-cy) * var(--u));
+  width: calc(1523 * var(--u));
+  height: calc(1536 * var(--u));
+  pointer-events: none;
+  user-select: none;
+}
+
+.layer {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--h) * var(--u));
+  max-width: none;
+}
+
+.layer--figure {
+  transform-origin: calc(var(--ox) * var(--u)) calc(var(--oy) * var(--u));
+}
+
+.layer--shadow {
+  transform-origin: 50% 50%;
+}
+
+/* Until the choreography takes over, motion-enabled visitors see empty paper. */
+.is-staged .layer--figure,
+.is-staged .layer--shadow {
+  visibility: hidden;
+}
+
+.is-moving .layer--figure,
+.is-moving .layer--shadow {
+  will-change: transform, opacity;
+}
+
+.replay {
+  position: absolute;
+  left: 50%;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  translate: -50% 0;
+  padding: 10px 14px;
+  border: 0;
+  background: none;
+  color: var(--graphite);
+  font: inherit;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 1.6s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.replay[hidden] {
+  display: block;
+  visibility: hidden;
+}
+
+.is-resting .replay {
+  opacity: 0.55;
+}
+
+.replay:hover,
+.replay:focus-visible {
+  opacity: 0.9;
+}
+
+.replay:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .replay,
+  .replay[hidden] {
+    display: none;
+  }
+}

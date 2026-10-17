@@ -13,21 +13,32 @@ A home for Little KC character animation, *The Arrival*, interactive web experie
 - Favor exceptionally crafted motion, typography, sound, and interaction over generic effects.
 - Keep original source assets separate from derived animation assets.
 
-## Planned organization
+## The Arrival (first study)
 
-- `public/little-kc/` — original character assets and approved derivatives
-- `public/imagery/` — approved imagery
-- `src/experiences/` — individual web experiences
-- `src/animation/` — animation logic and choreography
-- `src/components/` — shared interface components
-- `src/styles/` — site-wide styles and visual system
-- `studies/` — isolated prototypes
-- `docs/` — briefs and creative direction
+Little KC drifts down onto the paper beneath his two balloons, settles, and comes to rest exactly as Jim drew him.
+Concept, beats, easing, layer extraction and an honest status report: **[docs/THE-ARRIVAL-NOTES.md](docs/THE-ARRIVAL-NOTES.md)**.
+Brief: [docs/OPUS-THE-ARRIVAL.md](docs/OPUS-THE-ARRIVAL.md).
 
-Folders will be created as actual work and original assets arrive.
+```bash
+npm install
+npm run dev        # http://localhost:5173  (add ?t=3.6 to freeze a moment)
+npm run build      # type-check + production build → dist/
+npm run preview    # serve dist/
+npm test           # choreography tests + pixel-fidelity check of derived layers
+npm run capture    # after build: headless Chrome frames, fit checks, frame pacing (needs Chrome)
+npm run extract    # regenerate derived layers from the master (only if extraction changes)
+```
 
-## First experience: The Arrival
+Stack: Vite + TypeScript, no runtime dependencies. `sharp` and `puppeteer-core` are dev-only tools.
 
-Build an art-directed character entrance using Jim's original Little KC drawing and concept. Timing, layered artwork, interaction, and audio should be evaluated in-browser before anything is released.
+## Organization
 
-**Status:** Foundation only. No artwork, animation, or deployment has been added.
+- `bea8729f-ce73-440b-804f-88e87d98273d.jpeg` — **canonical master drawing, unmodified**
+- `public/little-kc/derived/` — layers derived from the master by `scripts/extract-layers.mjs` (+ `manifest.json`)
+- `src/animation/` — choreography (pure `pose(t)`), with tests
+- `src/experiences/arrival/` — the scene: builds layers, applies poses
+- `src/styles/` — composition and paper
+- `scripts/` — layer extraction, fidelity verification, browser capture
+- `docs/` — briefs, notes, captures
+
+**Status:** V1 study on branch `the-arrival`. Not deployed.

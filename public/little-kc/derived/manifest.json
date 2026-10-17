@@ -1,0 +1,55 @@
+{
+  "source": "bea8729f-ce73-440b-804f-88e87d98273d.jpeg",
+  "width": 1523,
+  "height": 1536,
+  "paper": [
+    239,
+    222,
+    201
+  ],
+  "layers": {
+    "figure": {
+      "x": 440,
+      "y": 330,
+      "w": 750,
+      "h": 800
+    },
+    "shadow": {
+      "x": 466,
+      "y": 1146,
+      "w": 356,
+      "h": 52
+    },
+    "marks": [
+      {
+        "file": "mark-1.png",
+        "x": 446,
+        "y": 986,
+        "w": 15,
+        "h": 16
+      },
+      {
+        "file": "mark-2.png",
+        "x": 729,
+        "y": 457,
+        "w": 26,
+        "h": 18
+      },
+      {
+        "file": "mark-3.png",
+        "x": 1208,
+        "y": 582,
+        "w": 28,
+        "h": 12
+      }
+    ]
+  },
+  "droppedGrainPixels": 4032,
+  "tile": {
+    "file": "paper.jpg",
+    "x": 40,
+    "y": 40,
+    "size": 384,
+    "output": 768
+  }
+}
