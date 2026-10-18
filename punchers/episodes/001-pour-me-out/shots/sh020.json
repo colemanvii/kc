@@ -1,0 +1,55 @@
+{
+  "id": "SH020",
+  "title": "Stand and decision",
+  "note": "Plant feet. Stand with weight. Hold before the first step. Camera: Locked profile.",
+  "in": "4s",
+  "out": "7s",
+  "environment": "ryman-backstage",
+  "lensMm": 50,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "4s",
+          "v": 1200.0
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "4s",
+          "v": 990.0
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "4s",
+          "v": 937.5
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1290,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "4s",
+          "v": 1000
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "stand"
+    }
+  },
+  "missing": [
+    "Approved stand drawings",
+    "stool",
+    "profile scenery"
+  ]
+}

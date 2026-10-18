@@ -1,0 +1,53 @@
+{
+  "id": "001-pour-me-out",
+  "title": "Pour Me Out",
+  "delivery": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "sensorHeightMm": 14
+  },
+  "audio": {
+    "src": null,
+    "offset": 0,
+    "status": "missing",
+    "note": "No approved recording in the repository. The 24\u201336 s vocal window is an editorial cue, not a verified song timestamp. To swap in: put the file at public/punchers/audio/, set src to its root path, set offset to the song time where this cut begins, and replace the tempo with measured beat-times."
+  },
+  "tempo": {
+    "kind": "segments",
+    "placeholder": true,
+    "beatsPerBar": 4,
+    "downbeat": 0,
+    "segments": [
+      {
+        "bar": 1,
+        "bpm": 60
+      }
+    ],
+    "bars": 11
+  },
+  "markers": {
+    "vocal": "24s",
+    "release": "36s"
+  },
+  "environment": "ryman-backstage",
+  "cast": {
+    "kc": {
+      "poses": "little-kc",
+      "z": 20
+    }
+  },
+  "performance": {},
+  "shots": [
+    "sh010",
+    "sh020",
+    "sh030",
+    "sh040",
+    "sh050",
+    "sh060",
+    "sh070",
+    "sh080",
+    "sh090",
+    "sh100"
+  ]
+}

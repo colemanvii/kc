@@ -1,0 +1,149 @@
+{
+  "title": "Pour Me Out",
+  "artist": "Kashus Culpepper",
+  "fps": 24,
+  "duration": 42,
+  "status": "Timing/layout only; missing production assets are not substituted",
+  "shots": [
+    {
+      "title": "Backstage stool",
+      "start": 0,
+      "duration": 4,
+      "lens": "40mm",
+      "camera": "Almost imperceptible push",
+      "action": "One breath. Hands settle. Stay with his solitude.",
+      "missing": "Seated original pose · stool · backstage artwork",
+      "pos": [
+        0.28,
+        0.67,
+        0.14
+      ]
+    },
+    {
+      "title": "Stand and decision",
+      "start": 4,
+      "duration": 3,
+      "lens": "50mm",
+      "camera": "Locked profile",
+      "action": "Plant feet. Stand with weight. Hold before the first step.",
+      "missing": "Approved stand drawings · stool · profile scenery",
+      "pos": [
+        0.38,
+        0.66,
+        0.32
+      ]
+    },
+    {
+      "title": "Backstage walk",
+      "start": 7,
+      "duration": 4,
+      "lens": "40mm",
+      "camera": "Slow lateral track",
+      "action": "Measured left-to-right walk; minimal arm swing.",
+      "missing": "Approved walk poses · layered passage artwork",
+      "pos": [
+        0.42,
+        0.68,
+        0.2
+      ]
+    },
+    {
+      "title": "Threshold pause",
+      "start": 11,
+      "duration": 3,
+      "lens": "50mm",
+      "camera": "Rear view; settle and hold",
+      "action": "Stop at the threshold. One breath. A slight head lift.",
+      "missing": "Approved rear pose · stage-opening artwork",
+      "pos": [
+        0.4,
+        0.69,
+        0.16
+      ]
+    },
+    {
+      "title": "Ryman reveal",
+      "start": 14,
+      "duration": 5,
+      "lens": "28mm",
+      "camera": "Slow forward creep past curtain",
+      "action": "Hold Little KC small. Let the room open in layers.",
+      "missing": "Jim’s rear pose · verified Ryman layout · painted room",
+      "pos": [
+        0.26,
+        0.72,
+        0.09
+      ]
+    },
+    {
+      "title": "Crossing to the microphone",
+      "start": 19,
+      "duration": 5,
+      "lens": "35mm",
+      "camera": "Wide reverse from auditorium; locked",
+      "action": "Four seconds crossing. One second to arrive and settle.",
+      "missing": "Approved walk poses · auditorium reverse · microphone",
+      "pos": [
+        0.3,
+        0.66,
+        0.12
+      ]
+    },
+    {
+      "title": "First vocal phrase",
+      "start": 24,
+      "duration": 5,
+      "lens": "65mm",
+      "camera": "Restrained 30–40cm push",
+      "action": "Small breath. Lean toward the microphone. Begin singing.",
+      "missing": "Approved singing poses · microphone · selected audio",
+      "pos": [
+        0.5,
+        0.72,
+        0.42
+      ]
+    },
+    {
+      "title": "Intimate performance detail",
+      "start": 29,
+      "duration": 4,
+      "lens": "85mm",
+      "camera": "Locked; closest view",
+      "action": "Chin lifts. One hand opens. Give the gesture time.",
+      "missing": "Approved close-up and hand drawings · selected audio",
+      "pos": [
+        0.5,
+        0.79,
+        0.58
+      ]
+    },
+    {
+      "title": "Letting the phrase land",
+      "start": 33,
+      "duration": 3,
+      "lens": "65mm",
+      "camera": "Locked; slightly wider",
+      "action": "Hand settles. Breath and a small shoulder release.",
+      "missing": "Approved release pose · selected vocal phrase",
+      "pos": [
+        0.5,
+        0.73,
+        0.43
+      ]
+    },
+    {
+      "title": "Final retreating wide",
+      "start": 36,
+      "duration": 6,
+      "lens": "35mm",
+      "camera": "Backward aisle dolly; settle, then fade",
+      "action": "Remain at the microphone. Retreat 4.5s, hold, then fade.",
+      "missing": "Original standing pose · verified aisle artwork",
+      "pos": [
+        0.5,
+        0.62,
+        0.11
+      ]
+    }
+  ]
+}

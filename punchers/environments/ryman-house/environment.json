@@ -1,0 +1,64 @@
+{
+  "id": "ryman-house",
+  "status": "blockout",
+  "assetBase": "/punchers/environments/ryman-house/",
+  "ground": [
+    30,
+    28,
+    26
+  ],
+  "planes": [
+    {
+      "id": "upstage",
+      "kind": "slot",
+      "z": -500,
+      "rect": {
+        "x": -600,
+        "y": -300,
+        "w": 4800,
+        "h": 1500
+      },
+      "label": "Ryman stage \u00b7 upstage wall (missing)",
+      "file": null
+    },
+    {
+      "id": "stage",
+      "kind": "slot",
+      "z": -60,
+      "rect": {
+        "x": -600,
+        "y": 1180,
+        "w": 4800,
+        "h": 320
+      },
+      "label": "Stage floor and lip (missing)",
+      "file": null
+    },
+    {
+      "id": "mic",
+      "kind": "slot",
+      "z": 10,
+      "rect": {
+        "x": 1735,
+        "y": 860,
+        "w": 70,
+        "h": 440
+      },
+      "label": "Microphone (missing)",
+      "file": null
+    },
+    {
+      "id": "pews",
+      "kind": "slot",
+      "z": 420,
+      "rect": {
+        "x": -1400,
+        "y": 1450,
+        "w": 6400,
+        "h": 900
+      },
+      "label": "Pews \u00b7 house foreground (missing)",
+      "file": null
+    }
+  ]
+}

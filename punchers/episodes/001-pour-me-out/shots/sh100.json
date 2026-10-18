@@ -1,0 +1,75 @@
+{
+  "id": "SH100",
+  "title": "Final retreating wide",
+  "note": "Remain at the microphone. Retreat 4.5s, hold, then fade. Camera: Backward aisle dolly; settle, then fade.",
+  "in": "36s",
+  "out": "42s",
+  "environment": "ryman-house",
+  "lensMm": 35,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "36s",
+          "v": 1700
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "36s",
+          "v": 947.1
+        },
+        {
+          "at": "40.5s",
+          "v": 822.7,
+          "ease": "inOutSine"
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "36s",
+          "v": 1690.9
+        },
+        {
+          "at": "40.5s",
+          "v": 2727.3,
+          "ease": "inOutSine"
+        }
+      ],
+      "picture.fade": [
+        {
+          "at": "41.52s",
+          "v": 0
+        },
+        {
+          "at": "42s",
+          "v": 1,
+          "ease": "inSine"
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1300,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "36s",
+          "v": 1700
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "stand"
+    }
+  },
+  "missing": [
+    "Original standing pose",
+    "verified aisle artwork"
+  ]
+}

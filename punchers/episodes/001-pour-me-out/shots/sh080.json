@@ -1,0 +1,54 @@
+{
+  "id": "SH080",
+  "title": "Intimate performance detail",
+  "note": "Chin lifts. One hand opens. Give the gesture time. Camera: Locked; closest view.",
+  "in": "29s",
+  "out": "33s",
+  "environment": "ryman-mic",
+  "lensMm": 85,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "29s",
+          "v": 1830.0
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "29s",
+          "v": 1100.0
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "29s",
+          "v": 517.2
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1400,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "29s",
+          "v": 1830
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "hand-open"
+    }
+  },
+  "missing": [
+    "Approved close-up and hand drawings",
+    "selected audio"
+  ]
+}

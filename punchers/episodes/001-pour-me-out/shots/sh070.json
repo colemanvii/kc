@@ -1,0 +1,60 @@
+{
+  "id": "SH070",
+  "title": "First vocal phrase",
+  "note": "Small breath. Lean toward the microphone. Begin singing. Camera: Restrained 30\u201340cm push.",
+  "in": "24s",
+  "out": "29s",
+  "environment": "ryman-mic",
+  "lensMm": 65,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "24s",
+          "v": 1830.0
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "24s",
+          "v": 1092.9
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "24s",
+          "v": 714.3
+        },
+        {
+          "at": "29s",
+          "v": 664.3,
+          "ease": "inOutSine"
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1400,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "24s",
+          "v": 1830
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "sing"
+    }
+  },
+  "missing": [
+    "Approved singing poses",
+    "microphone",
+    "selected audio"
+  ]
+}

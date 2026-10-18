@@ -1,0 +1,89 @@
+/* PUNCHERS shot proof — a review screen, not a website. The picture is the only
+   colour on the page; everything else stays dark and quiet. */
+
+:root {
+  --bg: #12110f;
+  --rule: #2b2824;
+  --dim: #7d756c;
+  --text: #d9cfc3;
+  --accent: #c1352b; /* KC's red, sampled from the master */
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
+
+body { font: 400 12px/1.5 ui-monospace, 'SF Mono', Menlo, monospace; -webkit-font-smoothing: antialiased; }
+
+.proof { max-width: 1280px; margin: 0 auto; padding: 24px 16px 40px; }
+
+.screen { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+
+.picture { display: block; opacity: 0; transition: opacity 0.4s ease; }
+.is-ready .picture, .is-render .picture { opacity: 1; }
+
+/* Action-safe (93%) and title-safe (90%), plus the source-resolution readout. */
+.guides { position: absolute; inset: 0; pointer-events: none; }
+.guides[hidden] { display: none; }
+.guide { position: absolute; border: 1px solid rgb(255 255 255 / 0.28); }
+.guide--action { inset: 3.5%; }
+.guide--title { inset: 5%; border-style: dashed; border-color: rgb(255 255 255 / 0.18); }
+.guides::after {
+  content: attr(data-readout);
+  position: absolute; left: 3.5%; bottom: 0.6%;
+  color: rgb(0 0 0 / 0.62); font-size: 11px;
+}
+.guides.is-over::after { color: var(--accent); }
+
+.transport { margin-top: 14px; }
+
+.row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.spacer { flex: 1; }
+
+.play {
+  min-width: 64px; padding: 6px 12px;
+  border: 1px solid var(--rule); border-radius: 2px; background: none; color: var(--text);
+  font: inherit; letter-spacing: 0.06em; cursor: pointer;
+}
+.play:hover, .play:focus-visible { border-color: var(--dim); }
+
+.tc { font-variant-numeric: tabular-nums; color: var(--text); }
+.bb { color: var(--dim); min-width: 6ch; font-variant-numeric: tabular-nums; }
+.bb::before { content: 'bar '; }
+.shot { color: var(--accent); letter-spacing: 0.08em; }
+
+.toggle { color: var(--dim); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.toggle input { accent-color: var(--accent); margin: 0; }
+
+.scrub { position: relative; height: 44px; margin-top: 14px; cursor: ew-resize; touch-action: none; }
+.scrub:focus-visible { outline: 1px solid var(--dim); outline-offset: 4px; }
+.bars { position: absolute; inset: 0 0 20px; border-bottom: 1px solid var(--rule); }
+.bars i { position: absolute; bottom: 0; width: 1px; height: 6px; background: var(--rule); }
+.bars i[data-bar]::after { content: attr(data-bar); position: absolute; left: 4px; bottom: 2px; color: var(--dim); font-size: 10px; font-style: normal; }
+.shots { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; }
+.shots span {
+  position: absolute; top: 0; bottom: 0; padding-left: 6px;
+  border-left: 1px solid var(--accent); color: var(--dim); font-size: 10px; line-height: 18px; overflow: hidden; white-space: nowrap;
+}
+.head { position: absolute; top: -4px; bottom: -2px; width: 1px; background: var(--text); pointer-events: none; }
+
+.note { margin: 14px 0 0; max-width: 72ch; color: var(--text); font: italic 14px/1.5 ui-serif, Georgia, serif; min-height: 3em; }
+.missing { margin: 6px 0 0; color: rgb(225 120 110); max-width: 90ch; min-height: 1.5em; }
+.episodes { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+.episodes a { color: var(--dim); text-decoration: none; }
+.episodes a[aria-current] { color: var(--text); }
+.episodes a:hover { color: var(--text); }
+.shots span { cursor: pointer; }
+.status { margin: 6px 0 0; color: var(--dim); max-width: 90ch; }
+
+/* Render mode: the picture alone, at delivery size. */
+.is-render body { background: #000; }
+.is-render .proof { max-width: none; padding: 0; margin: 0; }
+.is-render .screen { width: auto; aspect-ratio: auto; }
+.is-render .transport, .is-render .guides, .is-render .episodes { display: none; }
+
+@media (max-width: 560px) {
+  .proof { padding-top: 16px; }
+  .row { gap: 12px; }
+}

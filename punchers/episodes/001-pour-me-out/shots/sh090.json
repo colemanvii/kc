@@ -1,0 +1,54 @@
+{
+  "id": "SH090",
+  "title": "Letting the phrase land",
+  "note": "Hand settles. Breath and a small shoulder release. Camera: Locked; slightly wider.",
+  "in": "33s",
+  "out": "36s",
+  "environment": "ryman-mic",
+  "lensMm": 65,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "33s",
+          "v": 1830.0
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "33s",
+          "v": 1089.5
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "33s",
+          "v": 697.7
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1400,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "33s",
+          "v": 1830
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "release"
+    }
+  },
+  "missing": [
+    "Approved release pose",
+    "selected vocal phrase"
+  ]
+}

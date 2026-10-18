@@ -1,0 +1,70 @@
+{
+  "character": "little-kc",
+  "master": {
+    "file": "bea8729f-ce73-440b-804f-88e87d98273d.jpeg",
+    "width": 1523,
+    "height": 1536
+  },
+  "assetBase": "/little-kc/derived/",
+  "parts": [
+    {
+      "id": "shadow",
+      "drawing": {
+        "file": "shadow.png",
+        "rect": {
+          "x": 466,
+          "y": 1146,
+          "w": 356,
+          "h": 52
+        }
+      },
+      "pivot": [
+        644,
+        1172
+      ],
+      "z": -40
+    },
+    {
+      "id": "body",
+      "drawing": {
+        "file": "figure.png",
+        "rect": {
+          "x": 440,
+          "y": 330,
+          "w": 750,
+          "h": 800
+        }
+      },
+      "pivot": [
+        960,
+        470
+      ]
+    }
+  ],
+  "drivers": [
+    {
+      "type": "contact",
+      "part": "shadow",
+      "from": "body",
+      "widen": 0.2,
+      "range": 700
+    }
+  ],
+  "notCharacter": {
+    "reason": "Stray specks on Jim's sheet inside KC's bounds. They stay with the paper and are carried by environments/jims-sheet, not the rig.",
+    "rects": [
+      {
+        "x": 446,
+        "y": 986,
+        "w": 15,
+        "h": 16
+      },
+      {
+        "x": 729,
+        "y": 457,
+        "w": 26,
+        "h": 18
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "ryman-reveal",
+  "status": "blockout",
+  "assetBase": "/punchers/environments/ryman-reveal/",
+  "ground": [
+    30,
+    28,
+    26
+  ],
+  "planes": [
+    {
+      "id": "house",
+      "kind": "slot",
+      "z": -900,
+      "rect": {
+        "x": -800,
+        "y": -500,
+        "w": 4800,
+        "h": 1700
+      },
+      "label": "Ryman house \u00b7 balcony and pews beyond the stage (missing)",
+      "file": null
+    },
+    {
+      "id": "stage",
+      "kind": "slot",
+      "z": -250,
+      "rect": {
+        "x": -400,
+        "y": 1000,
+        "w": 4000,
+        "h": 700
+      },
+      "label": "Ryman stage floor and upstage (missing)",
+      "file": null
+    },
+    {
+      "id": "curtain",
+      "kind": "slot",
+      "z": 520,
+      "rect": {
+        "x": -900,
+        "y": -600,
+        "w": 1700,
+        "h": 2900
+      },
+      "label": "Curtain leg \u00b7 near occluder (missing)",
+      "file": null
+    }
+  ]
+}

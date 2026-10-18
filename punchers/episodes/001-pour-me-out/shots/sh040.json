@@ -1,0 +1,59 @@
+{
+  "id": "SH040",
+  "title": "Threshold pause",
+  "note": "Stop at the threshold. One breath. A slight head lift. Camera: Rear view; settle and hold.",
+  "in": "11s",
+  "out": "14s",
+  "environment": "ryman-backstage",
+  "lensMm": 50,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "11s",
+          "v": 2953.3
+        },
+        {
+          "at": "12.6s",
+          "v": 2893.3,
+          "ease": "outCubic"
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "11s",
+          "v": 783.8
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "11s",
+          "v": 1875.0
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1290,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "11s",
+          "v": 2560
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "rear"
+    }
+  },
+  "missing": [
+    "Approved rear pose",
+    "stage-opening artwork"
+  ]
+}

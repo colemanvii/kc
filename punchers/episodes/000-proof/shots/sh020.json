@@ -1,0 +1,17 @@
+{
+  "id": "SH020",
+  "note": "Medium on KC, cut on the downbeat. He is looking up at the balloons; the camera barely leans in.",
+  "in": "@settle",
+  "out": "@turn",
+  "camera": {
+    "defaults": { "camera.lens": 30 },
+    "keys": {
+      "camera.x": [{ "at": "@settle", "v": 800 }, { "at": "@turn", "v": 790 }],
+      "camera.y": [{ "at": "@settle", "v": 790 }, { "at": "@turn", "v": 800 }],
+      "camera.frame": [{ "at": "@settle", "v": 940 }, { "at": "@turn", "v": 880, "ease": "outSine" }]
+    },
+    "layers": [
+      { "type": "osc", "channel": "camera.x", "amp": 2, "periodBeats": 12, "from": "@settle", "to": "@turn", "fadeBeats": 2 }
+    ]
+  }
+}

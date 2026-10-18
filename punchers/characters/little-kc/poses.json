@@ -1,0 +1,53 @@
+{
+  "character": "Little KC",
+  "assetBase": "/punchers/characters/little-kc/poses/",
+  "poses": {
+    "floating": {
+      "file": "/little-kc/derived/figure.png",
+      "size": [
+        750,
+        800
+      ],
+      "anchor": [
+        0.49,
+        0.98
+      ],
+      "note": "Jim's master drawing (balloons and hat), alpha-cut from the flattened JPEG. The only approved drawing in the repository."
+    },
+    "seated": {
+      "file": null,
+      "placeholderAspect": 0.85,
+      "note": "Seated on the backstage stool, hands settling."
+    },
+    "stand": {
+      "file": null,
+      "placeholderAspect": 0.6,
+      "note": "Standing, weight planted (profile for SH02; front for SH10)."
+    },
+    "walk": {
+      "file": null,
+      "placeholderAspect": 0.6,
+      "note": "Walk: needs Jim's key drawings (contact, passing) \u2014 a walk cannot be built from one pose."
+    },
+    "rear": {
+      "file": null,
+      "placeholderAspect": 0.6,
+      "note": "Rear view at the threshold. Unseen view: must be drawn, never inferred."
+    },
+    "sing": {
+      "file": null,
+      "placeholderAspect": 0.6,
+      "note": "Singing at the microphone; mouth shapes as separate drawings for vocal sync."
+    },
+    "hand-open": {
+      "file": null,
+      "placeholderAspect": 0.7,
+      "note": "Close: chin lifts, one hand opens."
+    },
+    "release": {
+      "file": null,
+      "placeholderAspect": 0.6,
+      "note": "Hand settles; shoulders release."
+    }
+  }
+}

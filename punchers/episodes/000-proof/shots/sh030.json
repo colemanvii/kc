@@ -1,0 +1,14 @@
+{
+  "id": "SH030",
+  "note": "High wide, cut as the tempo eases. On the lift the balloons take him; the camera tilts after him, then lets him go. Empty sheet, the ground line fading.",
+  "in": "@turn",
+  "out": "@end",
+  "camera": {
+    "defaults": { "camera.lens": 30 },
+    "keys": {
+      "camera.x": [{ "at": "@turn", "v": 815 }],
+      "camera.y": [{ "at": "@lift", "v": 730 }, { "at": "@lift+2bars", "v": 560, "ease": "inOutSine" }, { "at": "@end", "v": 600, "ease": "inOutSine" }],
+      "camera.frame": [{ "at": "@turn", "v": 1420 }, { "at": "@end", "v": 1480, "ease": "linear" }]
+    }
+  }
+}
