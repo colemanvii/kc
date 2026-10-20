@@ -47,6 +47,14 @@ The current candidates still need visual review for character consistency,
 registration, face position and hand/guitar contact. Do not conceal a jump
 with transforms or easing. Report it.
 
+Initial review: both candidates are 1254×1254, matching the anchor dimensions.
+The intended face and strumming-arm changes are visible. The generated
+lower-body/stool region is not pixel-identical to neutral: in rectangle
+(280,840)–(1010,1160), mean absolute RGB difference is 5.256/255 for inhale
+and 4.668/255 for strum. This measures pixel variation, not geometric
+alignment. Inspect for flicker and displacement; do not assume registration
+is proven merely because the dimensions match.
+
 ## Playback
 
 Use a plain static HTML/CSS/JavaScript page; no dependencies or framework.
