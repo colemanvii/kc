@@ -1,0 +1,62 @@
+[
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-expression-02-smile.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-expression-02-smile.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "7803ff2ae3356a6e00f95601598fae0bc87641cd9cab81de3f3b940a540ad943",
+    "bytes": 54564
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-expression-03-singing.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-expression-03-singing.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "917e04aaba15569590ce1bc62b51ab8c3c61fc56538e943834576ba520a7195d",
+    "bytes": 58630
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-seated-01-neutral.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-seated-01-neutral.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "9415135f2c06247c6a6f6020ddbe2d9d1ceda462fbcb736efc0420641e4fe1b6",
+    "bytes": 81718
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-seated-02-smile.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-seated-02-smile.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "639862b91ed6e3ed0c877b4f558984ac4ce5680b6d52e20cfd08b49516cc7a97",
+    "bytes": 83484
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-seated-03-singing.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-seated-03-singing.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "8f28decbe08254b8568f5a160072780a7f7d36b0f5946684c854565854e8b30d",
+    "bytes": 83952
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-soulful-artist-crop.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-soulful-artist-crop.webp",
+    "size": [
+      666,
+      710
+    ],
+    "sha256": "f2b2c7132cf15a242f1038acfeb331341c8db9cb9b592192da6b217913288aaa",
+    "bytes": 33088
+  }
+]

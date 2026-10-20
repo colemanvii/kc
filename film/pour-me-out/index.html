@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pour Me Out — Board</title>
+<style>
+  :root {
+    --bg: #fdf4e2; --paper: #fffaf0; --ink: #2b211c; --muted: #7a685b; --line: #e3d3bd;
+    --exists: #3f6b4a; --new: #a4472f; --tbd: #9a7a2e;
+    --e1: #efe3cc; --e2: #e6cfa6; --e3: #d9b57e; --e4: #c98f55; --e5: #a4472f;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 28px 16px 80px; }
+  .mono { font-family: Menlo, ui-monospace, monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+  header h1 { font: 700 30px/1.1 Georgia, "Times New Roman", serif; margin: 6px 0 4px; }
+  header p { margin: 0; color: var(--muted); max-width: 70ch; }
+  nav { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0 8px; }
+  nav a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
+  nav a:hover { border-color: var(--muted); }
+  section { margin-top: 44px; }
+  h2 { font: 700 22px/1.2 Georgia, serif; margin: 0 0 4px; }
+  .lede { color: var(--muted); margin: 0 0 16px; max-width: 80ch; }
+  .note { border-left: 3px solid var(--tbd); background: var(--paper); padding: 10px 14px; margin: 14px 0; max-width: 90ch; }
+  .note b { color: var(--tbd); }
+
+  /* ── Full-song timeline ───────────────────────────── */
+  .tl-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+  .tl { display: grid; grid-template-columns: 132px repeat(var(--n), minmax(170px, 1fr)); min-width: calc(132px + var(--n) * 170px); }
+  .tl > div { padding: 10px 12px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); font-size: 13px; }
+  .tl .rowh { position: sticky; left: 0; background: var(--paper); z-index: 1; color: var(--muted); }
+  .tl .sec { font-weight: 700; font-size: 14px; }
+  .tl .sec small { display: block; font-weight: 400; color: var(--muted); }
+  .tl .energy { height: 54px; display: flex; align-items: flex-end; padding-bottom: 0; }
+  .tl .energy span { display: block; width: 100%; border-radius: 4px 4px 0 0; }
+  .tl .moment { font-style: italic; }
+  .tl .seq code { display: inline-block; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; margin: 2px 2px 0 0; font-size: 11px; }
+  .tl .art .tag { margin: 2px 2px 0 0; }
+  .tag { display: inline-block; font: 10px/1.6 Menlo, monospace; letter-spacing: .06em; border-radius: 4px; padding: 0 6px; color: #fff; }
+  .tag.exists { background: var(--exists); }
+  .tag.new { background: var(--new); }
+  .tag.tbd { background: var(--tbd); }
+
+  /* ── Sequences + artwork ─────────────────────────── */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .card h3 { margin: 0 0 4px; font-size: 15px; }
+  .card p { margin: 4px 0; font-size: 13px; color: var(--muted); }
+  table.art { width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); font-size: 13px; }
+  table.art th, table.art td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.art th { color: var(--muted); font-weight: 400; }
+  .art-scroll { overflow-x: auto; }
+
+  /* ── Storyboard ──────────────────────────────────── */
+  .board { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .frame { position: relative; aspect-ratio: 16 / 9; background: #fdf4e2; border-bottom: 1px solid var(--line); overflow: hidden; }
+  .frame .floor { position: absolute; left: 0; right: 0; top: 90%; border-top: 1px dashed #d8c6aa; }
+  .frame img { position: absolute; image-rendering: auto; }
+  .frame .ph { position: absolute; border: 1.5px dashed var(--new); border-radius: 6px; color: var(--new);
+               display: flex; align-items: center; justify-content: center; text-align: center; padding: 4px;
+               font: 10px/1.3 Menlo, monospace; letter-spacing: .06em; background: rgba(255,250,240,.6); }
+  .frame .stool { position: absolute; border: 1.5px dashed var(--muted); color: var(--muted); border-radius: 4px;
+                  display: flex; align-items: flex-end; justify-content: center; font: 9px/1.3 Menlo, monospace; padding-bottom: 3px; }
+  .frame .arrow { position: absolute; color: var(--muted); font: 18px/1 Menlo, monospace; }
+  .frame .crop { position: absolute; border: 1.5px solid var(--ink); border-radius: 2px; }
+  .frame .crop::after { content: "end crop"; position: absolute; top: -16px; left: 0; font: 9px Menlo, monospace; color: var(--ink); }
+  .frame .num { position: absolute; top: 8px; left: 10px; font: 700 12px Menlo, monospace; color: var(--muted); }
+  .pbody { padding: 12px 14px 14px; }
+  .pbody h3 { margin: 0 0 2px; font-size: 16px; }
+  .pbody .cue { color: var(--tbd); font-size: 12px; margin: 0 0 8px; }
+  .pbody dl { display: grid; grid-template-columns: 74px 1fr; gap: 3px 10px; margin: 0; font-size: 13px; }
+  .pbody dt { color: var(--muted); }
+  .pbody dd { margin: 0; }
+  .open { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
+  .open li { margin: 6px 0; }
+  footer { margin-top: 60px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mono">Little KC · animated music video · working board</div>
+  <h1>Pour Me Out</h1>
+  <p>Kashus Culpepper. Big Loud Records, released 22 Nov 2024. Character: <b>07 Soulful Artist</b> (locked).
+     The reference is the official released recording. Nothing on this page is timed to audio yet.</p>
+  <nav>
+    <a href="#timeline">Full-song timeline</a>
+    <a href="#opening">Opening storyboard</a>
+    <a href="#sequences">Performance sequences</a>
+    <a href="#artwork">Artwork list</a>
+    <a href="#questions">Open questions</a>
+  </nav>
+</header>
+
+<section id="timeline">
+  <h2>Full-song timeline</h2>
+  <p class="lede">One column per musical section, in song order. The widths are <b>not to scale</b>. Energy is a proposed
+     emotional intensity, not a measurement.</p>
+  <div class="note"><b>Structure unconfirmed.</b> The sections below are a working assumption about how the song is arranged.
+     They have not been checked against the audio. The first job once we have the file is to listen through, then rename, merge
+     or delete columns and write in real start times (bar or timecode). Edit the <code>SONG</code> list in this file.</div>
+  <div class="tl-scroll"><div class="tl" id="tl"></div></div>
+</section>
+
+<section id="opening">
+  <h2>Opening storyboard: SH010 "Arrival at the stool"</h2>
+  <p class="lede">One locked wide camera, one ground line, one stool position. The camera does not cut until KC is singing.
+     The push-in on the first line is a crop of the same art, so it needs no new drawings. KC enters frame left and walks right.
+     That way he finishes three-quarters right, matching the seated drawings. Staging follows Key Pose Study 001.</p>
+  <p class="lede"><span class="tag exists">EXISTS</span> approved 07 art, shown as is ·
+     <span class="tag new">NEW</span> a drawing still to make (a dashed box marks where it goes, not what it looks like)</p>
+  <div class="board" id="board"></div>
+</section>
+
+<section id="sequences">
+  <h2>Reusable performance sequences</h2>
+  <p class="lede">Short sets of drawings we make once and use wherever the song calls for them. Every one is made of drawn
+     key poses, never procedural motion.</p>
+  <div class="cards" id="seqs"></div>
+</section>
+
+<section id="artwork">
+  <h2>Artwork list</h2>
+  <p class="lede">Every new drawing matches 07: same proportions, hair, face, outfit, guitar, stool, pixel-styled rendering
+     and outline weight. Canvas 1254×1254, cream #FDF4E2, the same camera distance and ground line as the seated drawings.</p>
+  <div class="art-scroll"><table class="art" id="art"></table></div>
+</section>
+
+<section id="questions">
+  <h2>Open questions</h2>
+  <div class="open"><ol>
+    <li><b>Local audio file.</b> I need the official release as a local file, ideally the WAV master or a high-quality
+        AAC or MP3 (48 kHz is fine). Save it as <code>film/pour-me-out/audio/pour-me-out.wav</code>. Git ignores that folder,
+        so the recording stays out of history.</li>
+    <li><b>Is the intro long enough for the walk?</b> Walk, turn, sit, settle and breathe takes several seconds of screen
+        time. If the intro is short, the walk can start over a few seconds of room tone before the first note, or the
+        empty-stool hold can be cut.</li>
+    <li><b>Lyric imagery.</b> Each section's scene note says where lyric-driven imagery could go. Decide that after a
+        listen with the lyrics in front of us, not before.</li>
+    <li><b>Ending.</b> Proposed: he finishes, stands, and walks off frame right, leaving the empty stool. The exit reuses
+        the entrance walk drawings. Alternative: hold on him seated and fade.</li>
+    <li><b>Aspect ratio.</b> Boards are drawn 16:9. Say so if the release is vertical (9:16) or square instead.</li>
+  </ol></div>
+</section>
+
+<footer>Static page, no build. Open directly or serve the repo root. Edit the data lists at the bottom of this file.</footer>
+</div>
+
+<script>
+// Paths are relative to this file. Originals are referenced, never copied or modified.
+const ART = '../../character-dev/004/explorations/chatgpt/';
+
+// ── Full song, in order. Structure is an ASSUMPTION until checked against the recording. ──
+const SONG = [
+  { name: 'Intro', kind: 'Instrumental', start: 'TBD', energy: 1,
+    moment: 'Anticipation. An empty stool, then he arrives.',
+    scene: 'SH010 locked wide. Empty stool, then the walk-in.',
+    action: 'Walks in from left with guitar → approaches → turns → sits → settles → breath.',
+    seq: ['WALK', 'SIT'], art: ['01a', '01b', '02', '03', '04', '05', '06', 'plate'] },
+  { name: 'Verse 1', kind: 'Vocal', start: 'TBD', energy: 2,
+    moment: 'The first word. Sincere, close to the chest.',
+    scene: 'SH010 continues. Slow crop push from wide toward medium.',
+    action: 'Sings looking up, unhurried. Small strum.',
+    seq: ['SING-UP', 'STRUM'], art: ['07', 'mouths', 'strum'] },
+  { name: 'Pre-chorus', kind: 'Vocal · if present', start: 'TBD', energy: 3,
+    moment: 'Building. He leans into it.',
+    scene: 'SH020 medium. Same art, cropped tighter.',
+    action: 'Weight forward, eyes start to close.',
+    seq: ['SING-UP', 'LEAN'], art: ['lean'] },
+  { name: 'Chorus 1', kind: 'Vocal', start: 'TBD', energy: 4,
+    moment: 'The plea, said out loud. The title line.',
+    scene: 'SH030 medium. Warm light change on the cream; no new set.',
+    action: 'Eyes closed, leaning in, full voice.',
+    seq: ['SING-CLOSED', 'LEAN'], art: ['sing-closed', 'lean'] },
+  { name: 'Verse 2', kind: 'Vocal', start: 'TBD', energy: 2,
+    moment: 'Back to intimacy, after letting something out.',
+    scene: 'SH040 close-up (crop or dedicated close-up drawing).',
+    action: 'Quieter. Eyes open, looking down at the guitar, then up.',
+    seq: ['SING-UP', 'STRUM'], art: ['closeup', 'look-down'] },
+  { name: 'Chorus 2', kind: 'Vocal', start: 'TBD', energy: 4,
+    moment: 'Same words, more weight.',
+    scene: 'SH050 back to medium; light warms further.',
+    action: 'As Chorus 1, reused, plus one head-back moment.',
+    seq: ['SING-CLOSED', 'LEAN', 'HEAD-BACK'], art: ['head-back'] },
+  { name: 'Bridge / solo', kind: 'Vocal or instrumental · confirm', start: 'TBD', energy: 3,
+    moment: 'The most exposed moment. Let it breathe.',
+    scene: 'SH060 hands-on-guitar detail, then back out to wide.',
+    action: 'Plays with his eyes closed, swaying slightly (drawn, not procedural).',
+    seq: ['STRUM', 'SWAY'], art: ['hands', 'sway'] },
+  { name: 'Final chorus', kind: 'Vocal', start: 'TBD', energy: 5,
+    moment: 'The peak. Everything poured out.',
+    scene: 'SH070 medium to close; strongest light.',
+    action: 'Head back on the big note, then leans in to finish.',
+    seq: ['HEAD-BACK', 'SING-CLOSED', 'LEAN'], art: [] },
+  { name: 'Outro', kind: 'Instrumental · confirm', start: 'TBD', energy: 1,
+    moment: 'Release. Quiet after the last note.',
+    scene: 'SH080 back to the opening wide (bookend).',
+    action: 'Last strum, eyes open, small smile; stands and walks off right. Empty stool.',
+    seq: ['SIT (reversed)', 'WALK'], art: ['smile', 'stand'] },
+];
+
+// ── Opening storyboard, SH010. Positions are % of a 16:9 frame. ──
+// img: existing 07 art file; ph: placeholder box for a drawing not yet made.
+const OPENING = [
+  { id: 'A', title: 'Empty stool', cue: 'Before or on the first note of the intro',
+    action: 'Nothing moves. The stool waits in the centre of the cream room.',
+    camera: 'Locked wide. Hold.', art: [['new', 'Empty-stool plate']],
+    stool: true },
+  { id: 'B', title: 'Enters frame left', cue: 'Early in the intro',
+    action: 'KC walks in carrying the guitar by the neck in his far hand, body hanging by his leg. Easy and unhurried.',
+    camera: 'Locked wide.', art: [['new', '01a walk: contact'], ['new', '01b walk: passing']],
+    ph: { x: 2, w: 17, label: '01a / 01b\nwalk' }, arrow: 20, stool: true },
+  { id: 'C', title: 'Crossing', cue: 'Mid-intro',
+    action: 'The walk continues: 01a and 01b alternate, the guitar swings slightly, his free arm stays relaxed.',
+    camera: 'Locked wide.', art: [['new', '01a / 01b, reused']],
+    ph: { x: 20, w: 17, label: '01a / 01b\nwalk' }, arrow: 38, stool: true },
+  { id: 'D', title: 'Sees the stool, slows', cue: 'Mid-intro',
+    action: 'Shorter stride, weight settling back, a hint of the dreamy upward look.',
+    camera: 'Locked wide.', art: [['new', '02 approach']],
+    ph: { x: 31, w: 17, label: '02\napproach' }, stool: true },
+  { id: 'E', title: 'Turns toward the stool', cue: 'Late in the intro',
+    action: 'Plants his feet and pivots three-quarters to camera, head leading. The guitar comes up in front of him.',
+    camera: 'Locked wide.', art: [['new', '03 turn']],
+    ph: { x: 38, w: 18, label: '03\nturn' }, stool: true },
+  { id: 'F', title: 'Sits', cue: 'Late in the intro',
+    action: 'Weight drops onto the stool. Guitar across his lap, eyes down to it. A small exhale.',
+    camera: 'Locked wide.', art: [['new', '04 sit']],
+    ph: { x: 39, w: 22, label: '04\nsit (registered to 05)' } },
+  { id: 'G', title: 'Settled, ready', cue: 'Last bar(s) of the intro',
+    action: 'Set and calm, looking up thoughtfully. The moment before the music turns to him.',
+    camera: 'Locked wide. Hold.', art: [['exists', '05 = 07-seated-01-neutral']],
+    img: '07-seated-01-neutral.webp' },
+  { id: 'H', title: 'Breath', cue: 'Just before the first vocal',
+    action: 'Eyes close, chin lifts slightly, shoulders rise a touch. One drawn pose, held: not a breathing loop.',
+    camera: 'Locked wide.', art: [['new', '06 inhale (face/shoulders edit of 05)']],
+    img: '07-seated-01-neutral.webp', ph: { x: 44, w: 12, y: 18, h: 26, label: '06', clear: true } },
+  { id: 'I', title: 'First line', cue: 'First word of Verse 1',
+    action: 'He sings. Soulful and sincere, not goofy. The camera begins a slow crop push toward medium.',
+    camera: 'Locked; slow crop push (same art).', art: [['exists', '07 = 07-seated-03-singing']],
+    img: '07-seated-03-singing.webp', crop: true },
+];
+
+const SEQUENCES = [
+  { id: 'WALK', name: 'Walk with guitar', use: 'Intro entrance; outro exit (continues left to right)',
+    poses: '01a contact · 01b passing', status: 'new' },
+  { id: 'SIT', name: 'Approach → turn → sit → settle', use: 'Intro; played backwards (or one stand drawing) for the outro',
+    poses: '02 · 03 · 04 · 05', status: 'new' },
+  { id: 'SING-UP', name: 'Singing, eyes up', use: 'Verses, softer lines',
+    poses: '07 singing + 3–4 mouth shapes (closed / open / round / wide)', status: 'part' },
+  { id: 'SING-CLOSED', name: 'Singing, eyes closed', use: 'Choruses, held notes',
+    poses: 'Eyes-closed face edit of 07 + the same mouth shapes', status: 'new' },
+  { id: 'LEAN', name: 'Lean in', use: 'Pre-chorus and chorus build',
+    poses: '1 leaning seated drawing (lean-in, return)', status: 'new' },
+  { id: 'HEAD-BACK', name: 'Head back on the big note', use: 'Chorus 2 and final chorus peak',
+    poses: '1 head-back seated drawing', status: 'new' },
+  { id: 'STRUM', name: 'Strum', use: 'Anywhere he is playing',
+    poses: '2 strumming-hand positions (up / down) on the seated body', status: 'new' },
+  { id: 'SWAY', name: 'Sway', use: 'Bridge or solo',
+    poses: '2 drawn lean positions left/right, eased between key frames', status: 'new' },
+];
+
+const ARTWORK = [
+  ['07 standing', 'Character anchor', '07-soulful-artist-crop.webp', 'exists', 'Reference'],
+  ['05 seated, neutral', 'SH010 G · base plate', '07-seated-01-neutral.webp', 'exists', 'Opening'],
+  ['Seated smile', 'Outro', '07-seated-02-smile.webp', 'exists', 'Song'],
+  ['07 seated, singing', 'SH010 I and all singing', '07-seated-03-singing.webp', 'exists', 'Opening'],
+  ['Empty-stool plate', 'SH010 A, outro', 'Stool + floor shadow on cream, matching the seated art', 'new', 'Opening'],
+  ['01a walk: contact', 'SH010 B–C, outro', 'Generate first and approve it before anything else', 'new', 'Opening'],
+  ['01b walk: passing', 'SH010 B–C, outro', 'Matched to 01a', 'new', 'Opening'],
+  ['02 approach', 'SH010 D', '', 'new', 'Opening'],
+  ['03 turn', 'SH010 E', '', 'new', 'Opening'],
+  ['04 sit', 'SH010 F', 'Registered to 05 so it cuts straight in', 'new', 'Opening'],
+  ['06 inhale', 'SH010 H', 'Face and shoulders edit of 05, in the singing face position', 'new', 'Opening'],
+  ['Mouth shapes ×3–4', 'All singing', 'Mouth-only edits registered to 07 singing', 'new', 'Song'],
+  ['Singing, eyes closed', 'Choruses', 'Face edit of 07 singing', 'new', 'Song'],
+  ['Lean in', 'Pre-chorus, choruses', '', 'new', 'Song'],
+  ['Head back', 'Chorus 2, final chorus', '', 'new', 'Song'],
+  ['Strum hand ×2', 'All playing', '', 'new', 'Song'],
+  ['Sway ×2', 'Bridge', '', 'new', 'Song'],
+  ['Look down at guitar', 'Verse 2', '', 'new', 'Song'],
+  ['Close-up face', 'Verse 2', 'Only if the crop of 07 can\'t hold up at that size: check first', 'tbd', 'Song'],
+  ['Hands on guitar detail', 'Bridge', '', 'new', 'Song'],
+  ['Stand up', 'Outro', 'Or reuse 04 → 03 reversed', 'tbd', 'Song'],
+];
+
+// ── Render ──
+const el = (t, cls, html) => { const e = document.createElement(t); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+
+const tl = document.getElementById('tl');
+tl.style.setProperty('--n', SONG.length);
+const rows = [
+  ['Section', s => `<div class="sec">${s.name}<small>${s.kind}</small></div>`],
+  ['Start', s => `<span class="tag tbd">${s.start}</span>`],
+  ['Energy', s => `<span style="height:${s.energy * 20}%;background:var(--e${s.energy})" title="${s.energy}/5"></span>`, 'energy'],
+  ['Emotional moment', s => s.moment, 'moment'],
+  ['Scene / shot', s => s.scene],
+  ['Character action', s => s.action],
+  ['Sequences', s => s.seq.map(x => `<code>${x}</code>`).join(''), 'seq'],
+  ['Artwork', s => s.art.length ? s.art.map(a => `<span class="tag ${a === '05' || a === '07' ? 'exists' : 'new'}">${a}</span>`).join('') : '<span style="color:var(--muted)">reuse only</span>', 'art'],
+];
+for (const [label, f, cls] of rows) {
+  tl.append(el('div', 'rowh mono', label));
+  for (const s of SONG) tl.append(el('div', cls || '', f(s)));
+}
+
+const board = document.getElementById('board');
+OPENING.forEach((p, i) => {
+  const panel = el('article', 'panel');
+  const fr = el('div', 'frame');
+  fr.append(el('div', 'floor'));
+  // Seated art is a 1254² square; it fills the frame height, centred, with the stool at frame centre.
+  if (p.img) { const im = new Image(); im.src = ART + p.img; im.alt = p.art[0][1];
+    Object.assign(im.style, { height: '100%', left: '50%', top: '0', transform: 'translateX(-50%)' }); fr.append(im); }
+  if (p.stool) { const s = el('div', 'stool', 'stool'); Object.assign(s.style, { left: '46%', width: '8%', top: '65%', height: '25%' }); fr.append(s); }
+  if (p.ph) { const b = el('div', 'ph', p.ph.label.replace('\n', '<br>'));
+    Object.assign(b.style, { left: p.ph.x + '%', width: p.ph.w + '%', top: (p.ph.y ?? 27) + '%', height: (p.ph.h ?? 63) + '%' }); if (p.ph.clear) b.style.background = 'transparent'; fr.append(b); }
+  if (p.arrow != null) { const a = el('div', 'arrow', '→'); Object.assign(a.style, { left: p.arrow + '%', top: '48%' }); fr.append(a); }
+  if (p.crop) { const c = el('div', 'crop'); Object.assign(c.style, { left: '27.5%', width: '45%', top: '8%', height: '45%' }); fr.append(c); }
+  fr.append(el('div', 'num', `SH010 · ${p.id}`));
+  panel.append(fr);
+  const b = el('div', 'pbody');
+  b.innerHTML = `<h3>${p.title}</h3><p class="cue">Music cue: ${p.cue} (unconfirmed)</p>
+    <dl><dt>Action</dt><dd>${p.action}</dd><dt>Camera</dt><dd>${p.camera}</dd>
+    <dt>Art</dt><dd>${p.art.map(([s, n]) => `<span class="tag ${s}">${s.toUpperCase()}</span> ${n}`).join('<br>')}</dd></dl>`;
+  panel.append(b);
+  board.append(panel);
+});
+
+const seqs = document.getElementById('seqs');
+for (const s of SEQUENCES) {
+  const tag = s.status === 'part' ? '<span class="tag tbd">PARTLY EXISTS</span>' : '<span class="tag new">NEW</span>';
+  seqs.append(el('div', 'card', `<div class="mono">${s.id}</div><h3>${s.name} ${tag}</h3><p><b>Drawings:</b> ${s.poses}</p><p><b>Used in:</b> ${s.use}</p>`));
+}
+
+const art = document.getElementById('art');
+art.innerHTML = '<tr><th>Drawing</th><th>Status</th><th>Needed for</th><th>Phase</th><th>Notes / file</th></tr>' +
+  ARTWORK.map(([n, u, f, s, ph]) => `<tr><td>${n}</td><td><span class="tag ${s}">${s.toUpperCase()}</span></td><td>${u}</td><td>${ph}</td><td>${s === 'exists' ? `<a href="${ART + f}">${f}</a>` : f}</td></tr>`).join('');
+</script>
+</body>
+</html>
