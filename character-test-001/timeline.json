@@ -1,0 +1,15 @@
+{
+  "title": "Little KC — Character Test 001",
+  "duration": 10,
+  "fps": 24,
+  "status": "limited head motion study; choreography incomplete",
+  "source": "source/jim-seated-kc.png",
+  "artistMotionApproval": "pending",
+  "beats": [
+    {"start":0,"end":2,"requested":"gentle strum","actual":"rigid head rhythm","missing":["strumming hand poses","clean guitar overlap"]},
+    {"start":2,"end":4,"requested":"head up, eyes open, smile","actual":"small rigid head lift","missing":["open eyes","new smile","head-up drawing"]},
+    {"start":4,"end":6,"requested":"adjust guitar, prepare to stand","actual":"head settles","missing":["guitar adjustment","weight transfer"]},
+    {"start":6,"end":8,"requested":"hop off stool, plant boots","actual":"source-pose hold","missing":["push-off","descent","landing","clean stool"]},
+    {"start":8,"end":10,"requested":"walk out of frame","actual":"source-pose hold","missing":["approved walk cycle","exit-facing pose"]}
+  ]
+}

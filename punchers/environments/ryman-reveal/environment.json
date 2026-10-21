@@ -13,10 +13,10 @@
       "kind": "slot",
       "z": -900,
       "rect": {
-        "x": -800,
-        "y": -500,
-        "w": 4800,
-        "h": 1700
+        "x": -460,
+        "y": -1495,
+        "w": 6770,
+        "h": 3830
       },
       "label": "Ryman house \u00b7 balcony and pews beyond the stage (missing)",
       "file": null
@@ -26,10 +26,10 @@
       "kind": "slot",
       "z": -250,
       "rect": {
-        "x": -400,
+        "x": -175,
         "y": 1000,
-        "w": 4000,
-        "h": 700
+        "w": 6200,
+        "h": 1170
       },
       "label": "Ryman stage floor and upstage (missing)",
       "file": null
@@ -40,9 +40,9 @@
       "z": 520,
       "rect": {
         "x": -900,
-        "y": -600,
-        "w": 1700,
-        "h": 2900
+        "y": -1140,
+        "w": 1570,
+        "h": 3440
       },
       "label": "Curtain leg \u00b7 near occluder (missing)",
       "file": null

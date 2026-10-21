@@ -1,0 +1,17 @@
+{
+  "frames": 240,
+  "fps": 24,
+  "duration": 10,
+  "resolution": [
+    672,
+    760
+  ],
+  "browserErrors": [],
+  "controls": "play/pause/compare/restart exercised",
+  "mobileOverflow": false,
+  "scope": "head movement only; no strum, expression swap, adjustment, hop or walk",
+  "sourceResolution": [
+    336,
+    336
+  ]
+}
