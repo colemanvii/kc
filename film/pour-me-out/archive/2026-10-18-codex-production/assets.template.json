@@ -1,0 +1,12 @@
+{
+  "title": "Pour Me Out — approved reveal assets",
+  "canvas": { "width": 2560, "height": 1440 },
+  "environmentApproval": { "approved": false, "reference": "", "provider": "Gemini" },
+  "characterApproval": { "approved": false, "reference": "", "author": "Jim" },
+  "layers": [
+    { "id": "room", "file": "ryman-room.png", "motion": "plane3", "required": true, "description": "Approved Ryman house and balcony, complete behind nearer layers" },
+    { "id": "near", "file": "ryman-near.png", "motion": "plane0", "required": true, "description": "Approved nearer floor / pew detail on transparent canvas" },
+    { "id": "curtain", "file": "ryman-curtain.png", "motion": "curtain", "required": true, "description": "Approved stage-side occluder, on transparent canvas" },
+    { "id": "character", "file": "little-kc-rear.png", "motion": "character", "required": true, "description": "Jim-approved original rear or rear-three-quarter pose on transparent canvas" }
+  ]
+}

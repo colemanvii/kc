@@ -8,4 +8,4 @@ Do not flatten or duplicate a composite into the three slots. The current JSON h
 
 The house needs at least x −441…6289 and y −1475…2315 at its depth; allow overscan. For a 2160p master, the handoff recommends roughly 4400px-wide house and 4440px-wide stage artwork. A shared registered canvas must also accommodate the nearest curtain depth and intended occlusion.
 
-Only after approved artwork is connected should the placeholder tripwire be replaced as specified in handoff §3.4. Keep Jim's rear pose as a labelled bracket until his drawing arrives.
+Only after approved artwork is connected should the placeholder tripwire be replaced as specified in handoff §3.4. Keep Cole's rear pose as a labelled bracket until that drawing arrives.

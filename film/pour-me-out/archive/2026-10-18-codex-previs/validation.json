@@ -1,0 +1,25 @@
+{
+  "shotBoundaries": "10/10 passed",
+  "playPause": "passed",
+  "revealMode": "passed",
+  "mobileOverflow": "passed",
+  "browserErrors": [],
+  "exports": [
+    {
+      "file": "pour-me-out-timing-animatic.webm",
+      "frames": 1008,
+      "duration": 42,
+      "fps": 24
+    },
+    {
+      "file": "stage-reveal-technical-test.webm",
+      "frames": 120,
+      "duration": 5,
+      "fps": 24
+    }
+  ],
+  "limitations": [
+    "No character animation or venue fidelity validation without source assets",
+    "No audio synchronization validation without selected recording"
+  ]
+}
