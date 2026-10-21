@@ -1,0 +1,4 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["engine", "proof", "vite.config.ts"]
+}

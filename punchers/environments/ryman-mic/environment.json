@@ -1,0 +1,38 @@
+{
+  "id": "ryman-mic",
+  "status": "blockout",
+  "assetBase": "/punchers/environments/ryman-mic/",
+  "ground": [
+    30,
+    28,
+    26
+  ],
+  "planes": [
+    {
+      "id": "house",
+      "kind": "slot",
+      "z": -700,
+      "rect": {
+        "x": 600,
+        "y": 300,
+        "w": 2400,
+        "h": 1500
+      },
+      "label": "The house beyond the lights (missing)",
+      "file": null
+    },
+    {
+      "id": "mic",
+      "kind": "slot",
+      "z": 40,
+      "rect": {
+        "x": 1870,
+        "y": 990,
+        "w": 60,
+        "h": 420
+      },
+      "label": "Microphone (missing)",
+      "file": null
+    }
+  ]
+}

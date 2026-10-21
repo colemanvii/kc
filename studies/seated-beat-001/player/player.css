@@ -1,0 +1,115 @@
+:root {
+  --cream: #fbf3e4;
+  --ink: #2b211b;
+  --muted: #6e5f53;
+  --line: #d9c9b0;
+  --accent: #8a4b24;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 15px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.player {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 12px 16px 24px;
+}
+
+.head h1 { font-size: 17px; margin: 0; }
+.status { margin: 2px 0 10px; font-size: 13px; color: var(--muted); }
+
+/* Locked camera: every drawing is stacked whole at the same square frame. */
+.stage {
+  position: relative;
+  /* Shrink on short screens so the controls stay in view; never crops. */
+  width: max(260px, min(100%, calc(100svh - 350px)));
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  background: var(--cream);
+}
+.stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* All drawings are fully opaque and stay painted; the current one sits on top.
+   A hard cut, and never a blank frame while a hidden image is re-rasterised. */
+.stage img.on { z-index: 1; }
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+}
+.loading.error { color: #9b1c1c; white-space: pre-line; }
+.loading[hidden] { display: none; }
+
+.badge {
+  margin: 6px 0 0;
+  padding: 4px 8px;
+  border: 1px dashed var(--accent);
+  color: var(--accent);
+  font-size: 13px;
+  text-align: center;
+}
+.badge[hidden] { display: none; }
+
+.readout p { margin: 6px 0 0; }
+.muted { color: var(--muted); font-size: 13px; }
+.mono { font-variant-numeric: tabular-nums; font-size: 14px; }
+
+.scrub {
+  width: 100%;
+  height: 44px;
+  margin: 4px 0;
+  accent-color: var(--accent);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.speed { display: flex; gap: 6px; }
+
+button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fffaf1;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+button:disabled { opacity: 0.45; }
+button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+.loop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 4px;
+  font-size: 14px;
+}
+.loop input { width: 22px; height: 22px; margin: 0; accent-color: var(--accent); }

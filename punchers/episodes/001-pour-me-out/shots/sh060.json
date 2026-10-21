@@ -1,0 +1,65 @@
+{
+  "id": "SH060",
+  "title": "Crossing to the microphone",
+  "note": "Four seconds crossing. One second to arrive and settle. Camera: Wide reverse from auditorium; locked.",
+  "in": "19s",
+  "out": "24s",
+  "environment": "ryman-house",
+  "lensMm": 35,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "19s",
+          "v": 2038.9
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "19s",
+          "v": 750.0
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "19s",
+          "v": 2500.0
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1300,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "19s",
+          "v": 1150
+        },
+        {
+          "at": "23s",
+          "v": 1700,
+          "ease": "outSine"
+        },
+        {
+          "at": "24s",
+          "v": 1700,
+          "ease": "outSine"
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "walk"
+    }
+  },
+  "missing": [
+    "Approved walk poses",
+    "auditorium reverse",
+    "microphone"
+  ]
+}

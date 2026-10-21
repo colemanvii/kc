@@ -1,0 +1,19 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-20",
+  "status": "Candidates; user approval pending",
+  "inputs": [
+    "character-dev/004/explorations/chatgpt/07-seated-01-neutral.webp",
+    "character-dev/004/explorations/chatgpt/07-seated-03-singing.webp"
+  ],
+  "prompts": [
+    {
+      "key": "kc_inhale",
+      "prompt": "Use case: identity-preserve. Create ONE edited animation key pose, not a sheet. Input image 1 is the EDIT TARGET: approved Little KC seated neutral bitmap. Input image 2 is a supporting identity/expression reference: the approved singing frame. Edit image 1 into the quiet inhale just before a sincere first sung note. Close his eyes gently, keep his mouth softly closed, relax the brows (not sad or distressed), lift his chin a tiny amount and subtly lift the upper chest and shoulders with a restrained breath. The thought is: a slightly bashful musician lets go of the audience and finds the song inside himself. Preserve the exact character identity, afro pixel clusters and outer volume, warm brown skin, facial hair, black tank, silver necklace, baggy jeans, sneakers, wood acoustic guitar and stool. Preserve the exact square composition, full body scale, cream paper background, camera and ground line. Keep both hands touching their original places on the guitar, fretting fingers unchanged. Keep guitar geometry, stool, feet, legs, lower body and background unchanged. Only face and a small upper-body breath change. Preserve the original chunky pixel-styled texture; do not smooth, redesign, re-render in 3D or increase detail. Single full-frame square image, matching reference dimensions and registration as closely as possible. No text, labels, borders, motion lines, extra objects or balloon imagery. Output is a candidate key pose for review."
+    },
+    {
+      "key": "kc_strum",
+      "prompt": "Use case: precise-object-edit. Create ONE edited animation key pose, not a sheet. Input image 1 is the EDIT TARGET: approved Little KC seated neutral bitmap. Input image 2 is the supporting facial reference: approved singing frame. Edit image 1 into the end of ONE gentle downward guitar strum, before his mouth opens to sing. His eyes are softly closed, mouth closed, brow calm and absorbed. Change the strumming arm on image-left only as required for a believable downstroke: upper arm/elbow remain supported near the guitar's upper bout, forearm pivots down from the elbow, relaxed wrist and fingers finish just below the strings over the lower part of the soundboard. Make the changed hand position clearly readable but modest; it must stay close to the instrument, not swing below the guitar. No duplicated hand, extra fingers, motion blur or motion lines. The fretting hand on image-right holds the SAME chord at the SAME neck position. Preserve the exact character identity, afro silhouette and pixel clusters, warm brown skin, facial hair, outfit, necklace, jeans, sneakers, guitar outline/soundhole/bridge/neck/tuners/strings, stool, legs and feet. Preserve the exact full-body square framing, character scale, ground line, camera angle, cream paper backdrop and original chunky pixel-style rendering. Do not shift the entire character or instrument. Keep the seated body balanced and grounded. No new objects, text, labels, borders, balloons, stylistic redesign or 3D rendering. Single square image matching source registration as closely as possible; candidate key pose for review."
+    }
+  ]
+}

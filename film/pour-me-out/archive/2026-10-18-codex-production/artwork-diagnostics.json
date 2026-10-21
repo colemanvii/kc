@@ -1,0 +1,104 @@
+[
+  {
+    "file": "personal/assets/kashus-character.webp",
+    "bytes": 7506,
+    "sha256": "70a90712d50013881bfb15220bf4ee8e074f4403d8a6c14c480fc913e5d7b988",
+    "header_hex": "52494646325e00005745425056503820265e000090cc019d012a3702bc023eb9",
+    "riff_declared_bytes": 24122,
+    "chunks": [
+      {
+        "fourcc": "VP8 ",
+        "offset": 12,
+        "declared_payload_bytes": 24102,
+        "available_payload_bytes": 7486
+      }
+    ],
+    "pillow": "OSError: could not create decoder object",
+    "missing_bytes": 16616
+  },
+  {
+    "file": "personal/assets/kashus-after.webp",
+    "bytes": 7506,
+    "sha256": "72fd7360c024b4835338d98b4a66cae245ec506fd43a7c00fa9652ce5deea452",
+    "header_hex": "52494646e27d00005745425056503820d67d0000f0d9019d012a3a023a023eb9",
+    "riff_declared_bytes": 32234,
+    "chunks": [
+      {
+        "fourcc": "VP8 ",
+        "offset": 12,
+        "declared_payload_bytes": 32214,
+        "available_payload_bytes": 7486
+      }
+    ],
+    "pillow": "OSError: could not create decoder object",
+    "missing_bytes": 24728
+  },
+  {
+    "file": "mobile-refinement/assets/kashus-character.webp",
+    "bytes": 7506,
+    "sha256": "70a90712d50013881bfb15220bf4ee8e074f4403d8a6c14c480fc913e5d7b988",
+    "header_hex": "52494646325e00005745425056503820265e000090cc019d012a3702bc023eb9",
+    "riff_declared_bytes": 24122,
+    "chunks": [
+      {
+        "fourcc": "VP8 ",
+        "offset": 12,
+        "declared_payload_bytes": 24102,
+        "available_payload_bytes": 7486
+      }
+    ],
+    "pillow": "OSError: could not create decoder object",
+    "missing_bytes": 16616
+  },
+  {
+    "file": "mobile-refinement/assets/kashus-after.webp",
+    "bytes": 7506,
+    "sha256": "72fd7360c024b4835338d98b4a66cae245ec506fd43a7c00fa9652ce5deea452",
+    "header_hex": "52494646e27d00005745425056503820d67d0000f0d9019d012a3a023a023eb9",
+    "riff_declared_bytes": 32234,
+    "chunks": [
+      {
+        "fourcc": "VP8 ",
+        "offset": 12,
+        "declared_payload_bytes": 32214,
+        "available_payload_bytes": 7486
+      }
+    ],
+    "pillow": "OSError: could not create decoder object",
+    "missing_bytes": 24728
+  },
+  {
+    "file": "photos-study/assets/kashus-character.webp",
+    "bytes": 7506,
+    "sha256": "70a90712d50013881bfb15220bf4ee8e074f4403d8a6c14c480fc913e5d7b988",
+    "header_hex": "52494646325e00005745425056503820265e000090cc019d012a3702bc023eb9",
+    "riff_declared_bytes": 24122,
+    "chunks": [
+      {
+        "fourcc": "VP8 ",
+        "offset": 12,
+        "declared_payload_bytes": 24102,
+        "available_payload_bytes": 7486
+      }
+    ],
+    "pillow": "OSError: could not create decoder object",
+    "missing_bytes": 16616
+  },
+  {
+    "file": "photos-study/assets/kashus-after.webp",
+    "bytes": 7506,
+    "sha256": "72fd7360c024b4835338d98b4a66cae245ec506fd43a7c00fa9652ce5deea452",
+    "header_hex": "52494646e27d00005745425056503820d67d0000f0d9019d012a3a023a023eb9",
+    "riff_declared_bytes": 32234,
+    "chunks": [
+      {
+        "fourcc": "VP8 ",
+        "offset": 12,
+        "declared_payload_bytes": 32214,
+        "available_payload_bytes": 7486
+      }
+    ],
+    "pillow": "OSError: could not create decoder object",
+    "missing_bytes": 24728
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": "jims-sheet",
+  "assetBase": "/little-kc/derived/",
+  "ground": [239, 222, 201],
+  "planes": [
+    { "id": "paper", "kind": "tile", "file": "paper.jpg", "z": 0, "tileSize": 768 },
+    { "id": "mark-1", "kind": "sprite", "file": "mark-1.png", "z": 0, "rect": { "x": 446, "y": 986, "w": 15, "h": 16 } },
+    { "id": "mark-2", "kind": "sprite", "file": "mark-2.png", "z": 0, "rect": { "x": 729, "y": 457, "w": 26, "h": 18 } },
+    { "id": "mark-3", "kind": "sprite", "file": "mark-3.png", "z": 0, "rect": { "x": 1208, "y": 582, "w": 28, "h": 12 } }
+  ]
+}

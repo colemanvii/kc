@@ -1,0 +1,43 @@
+{
+  "title": "The first note",
+  "status": "Draft timing; new inhale and strum poses await visual approval",
+  "fps": 24,
+  "totalFrames": 96,
+  "audio": null,
+  "assets": {
+    "neutral": "character-dev/004/explorations/chatgpt/07-seated-01-neutral.webp",
+    "inhale": "studies/seated-beat-001/candidates/inhale-v1.png",
+    "strum": "studies/seated-beat-001/candidates/down-strum-v1.png",
+    "singing": "character-dev/004/explorations/chatgpt/07-seated-03-singing.webp"
+  },
+  "beats": [
+    {
+      "startFrame": 0,
+      "endFrameExclusive": 18,
+      "asset": "neutral",
+      "label": "Is anyone listening?",
+      "direction": "A quiet upward look. Give the thought time to read."
+    },
+    {
+      "startFrame": 18,
+      "endFrameExclusive": 36,
+      "asset": "inhale",
+      "label": "Find the breath",
+      "direction": "Eyes close, mouth stays closed, upper chest lifts subtly."
+    },
+    {
+      "startFrame": 36,
+      "endFrameExclusive": 42,
+      "asset": "strum",
+      "label": "One down-strum",
+      "direction": "A single clear downstroke. The fretting hand and instrument remain stable."
+    },
+    {
+      "startFrame": 42,
+      "endFrameExclusive": 96,
+      "asset": "singing",
+      "label": "Mean the first note",
+      "direction": "The voice opens; hold the conviction. No automatic return to neutral."
+    }
+  ]
+}

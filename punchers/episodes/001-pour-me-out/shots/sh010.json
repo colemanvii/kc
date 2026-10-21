@@ -1,0 +1,60 @@
+{
+  "id": "SH010",
+  "title": "Backstage stool",
+  "note": "One breath. Hands settle. Stay with his solitude. Camera: Almost imperceptible push.",
+  "in": "0s",
+  "out": "4s",
+  "environment": "ryman-backstage",
+  "lensMm": 40,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "0s",
+          "v": 1457.5
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "0s",
+          "v": 855.7
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "0s",
+          "v": 1642.9
+        },
+        {
+          "at": "4s",
+          "v": 1601.8,
+          "ease": "linear"
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1250,
+      "kc.h": 230
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "0s",
+          "v": 815
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "seated"
+    }
+  },
+  "missing": [
+    "Seated original pose",
+    "stool",
+    "backstage artwork"
+  ]
+}

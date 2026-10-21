@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seated Beat 001</title>
+  <link rel="stylesheet" href="player.css">
+</head>
+<body>
+  <main class="player">
+    <header class="head">
+      <h1 id="title">Seated beat 001</h1>
+      <p id="status" class="status">Silent draft timing · pose-and-timing study, not finished animation</p>
+    </header>
+
+    <div class="stage" id="stage" aria-live="off">
+      <p class="loading" id="loading">Loading drawings…</p>
+    </div>
+
+    <p class="badge" id="badge" hidden>Candidate drawing — awaiting approval</p>
+
+    <section class="readout" aria-live="polite">
+      <p><strong id="beat-label">—</strong> <span id="beat-asset" class="muted"></span></p>
+      <p id="beat-direction" class="muted"></p>
+      <p class="mono" id="time">0.00 s · frame 0 / 95</p>
+    </section>
+
+    <input id="scrub" class="scrub" type="range" min="0" max="95" step="1" value="0"
+           aria-label="Frame" disabled>
+
+    <div class="controls">
+      <button id="prev" type="button" aria-label="Previous drawing" disabled>◀︎ Prev</button>
+      <button id="play" type="button" disabled>Play</button>
+      <button id="next" type="button" aria-label="Next drawing" disabled>Next ▶︎</button>
+      <button id="replay" type="button" disabled>Replay</button>
+    </div>
+
+    <div class="options">
+      <div class="speed" role="group" aria-label="Playback speed">
+        <button type="button" data-speed="0.5" aria-pressed="false" disabled>0.5×</button>
+        <button type="button" data-speed="1" aria-pressed="true" disabled>1×</button>
+      </div>
+      <label class="loop"><input id="loop" type="checkbox" disabled> Loop</label>
+    </div>
+  </main>
+  <script src="player.js"></script>
+</body>
+</html>

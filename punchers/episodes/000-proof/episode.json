@@ -1,0 +1,48 @@
+{
+  "id": "000-proof",
+  "title": "Proof: Cole's sheet, three set-ups",
+  "delivery": { "width": 1280, "height": 720, "fps": 24 },
+  "audio": {
+    "src": null,
+    "status": "missing",
+    "note": "No song audio is in the repository. The tempo map below is a PLACEHOLDER (76 → 70 bpm); the player sounds a click from it. Replace with the master stem and its measured beat-times."
+  },
+  "tempo": {
+    "kind": "segments",
+    "beatsPerBar": 4,
+    "downbeat": 0,
+    "segments": [
+      { "bar": 1, "bpm": 76 },
+      { "bar": 9, "bpm": 70 }
+    ],
+    "bars": 13
+  },
+  "markers": {
+    "intro": "1:1",
+    "settle": "5:1",
+    "turn": "9:1",
+    "lift": "10:1",
+    "end": "13:1"
+  },
+  "environment": "jims-sheet",
+  "cast": {
+    "kc": { "rig": "little-kc", "z": 40 }
+  },
+  "performance": {
+    "keys": {
+      "kc.body.ty": [
+        { "at": "@lift", "v": 0 },
+        { "at": "@end-1beat", "v": -1650, "ease": "inQuad" }
+      ],
+      "kc.body.rot": [
+        { "at": "@lift", "v": 0 },
+        { "at": "@lift+2bars", "v": -1.4, "ease": "inOutSine" }
+      ]
+    },
+    "layers": [
+      { "type": "osc", "channel": "kc.body.ty", "amp": 7, "periodBeats": 8, "from": "@intro", "to": "@lift+1bar", "fadeBeats": 4 },
+      { "type": "osc", "channel": "kc.body.rot", "amp": 0.55, "periodBeats": 16, "phaseBeats": 4, "from": "@intro", "to": "@end", "fadeBeats": 6 }
+    ]
+  },
+  "shots": ["sh010", "sh020", "sh030"]
+}

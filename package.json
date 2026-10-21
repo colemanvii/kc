@@ -1,0 +1,35 @@
+{
+  "name": "kc-the-arrival",
+  "version": "0.1.0",
+  "description": "The Arrival — a motion study of Little KC for Kashus Culpepper",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "extract": "node scripts/extract-layers.mjs",
+    "verify:layers": "node scripts/verify-layers.mjs",
+    "test": "node --test \"src/**/*.test.ts\" && npm run verify:layers",
+    "capture": "node scripts/capture.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colemanvii/kc.git"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/colemanvii/kc/issues"
+  },
+  "homepage": "https://github.com/colemanvii/kc#readme",
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "puppeteer-core": "^23.11.1",
+    "sharp": "^0.33.5",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.4"
+  },
+  "private": true
+}

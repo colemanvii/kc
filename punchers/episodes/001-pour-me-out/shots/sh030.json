@@ -1,0 +1,64 @@
+{
+  "id": "SH030",
+  "title": "Backstage walk",
+  "note": "Measured left-to-right walk; minimal arm swing. Camera: Slow lateral track.",
+  "in": "7s",
+  "out": "11s",
+  "environment": "ryman-backstage",
+  "lensMm": 40,
+  "camera": {
+    "keys": {
+      "camera.x": [
+        {
+          "at": "7s",
+          "v": 1363.3
+        },
+        {
+          "at": "11s",
+          "v": 2093.3,
+          "ease": "inOutSine"
+        }
+      ],
+      "camera.y": [
+        {
+          "at": "7s",
+          "v": 870.0
+        }
+      ],
+      "camera.frame": [
+        {
+          "at": "7s",
+          "v": 1500.0
+        }
+      ]
+    }
+  },
+  "staging": {
+    "defaults": {
+      "kc.y": 1290,
+      "kc.h": 300
+    },
+    "keys": {
+      "kc.x": [
+        {
+          "at": "7s",
+          "v": 1150
+        },
+        {
+          "at": "11s",
+          "v": 2000,
+          "ease": "linear"
+        }
+      ]
+    }
+  },
+  "cast": {
+    "kc": {
+      "pose": "walk"
+    }
+  },
+  "missing": [
+    "Approved walk poses",
+    "layered passage artwork"
+  ]
+}

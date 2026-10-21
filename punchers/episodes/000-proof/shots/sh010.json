@@ -1,0 +1,14 @@
+{
+  "id": "SH010",
+  "note": "Wide. The whole drawing on its sheet; a slow dolly in, drifting left, landing as the phrase turns.",
+  "in": "@intro",
+  "out": "@settle",
+  "camera": {
+    "defaults": { "camera.lens": 30 },
+    "keys": {
+      "camera.x": [{ "at": "@intro", "v": 850 }, { "at": "@settle", "v": 812 }],
+      "camera.y": [{ "at": "@intro", "v": 760 }, { "at": "@settle", "v": 770 }],
+      "camera.frame": [{ "at": "@intro", "v": 1500 }, { "at": "@settle", "v": 1300, "ease": "inOutSine" }]
+    }
+  }
+}
