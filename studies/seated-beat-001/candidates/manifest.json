@@ -1,0 +1,24 @@
+{
+  "generator": "built-in image_gen",
+  "date": "2026-10-20",
+  "artifacts": [
+    {
+      "path": "studies/seated-beat-001/candidates/inhale-v1.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "2de6d068bffbcbd7be076fe7ee1440b6cd3d906d9dc95cb59ec48cbdf1298664",
+      "status": "candidate; user approval pending"
+    },
+    {
+      "path": "studies/seated-beat-001/candidates/down-strum-v1.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "6f8c7f964321d95e212f5aa044e10a5557aa2c99c819989f8ab3c7eb745b1fcf",
+      "status": "candidate; user approval pending"
+    }
+  ]
+}

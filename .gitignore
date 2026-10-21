@@ -7,3 +7,4 @@ dist/
 character-dev/004/references/private/
 film/pour-me-out/audio/*
 !film/pour-me-out/audio/README.md
+recovery/*.bundle

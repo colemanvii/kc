@@ -1,0 +1,194 @@
+[
+  {
+    "path": "character-dev/004/PROVENANCE.md",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/PROVENANCE.md",
+    "bytes": 6240,
+    "sha256": "4cf7e2ae64edea8e3629af6c482395d2e18f9e1d34239411fe453de0e682ee0b"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/02-soulful-artist-96px-cleanup.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/02-soulful-artist-96px-cleanup.png",
+    "bytes": 384881,
+    "sha256": "a7fb4ee5c43545426878aeb6de6bed0f81b2b288d451c2cfa237592821de166e"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/base-96.txt",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/base-96.txt",
+    "bytes": 5568,
+    "sha256": "163c795ff2a83a832342550651c1314561e2a448d1053615b87b143e4ba88246"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/base.mjs",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/base.mjs",
+    "bytes": 1823,
+    "sha256": "15f3dd7f7a0b92c14f4cf034a1efe4494f5ae146567544fb2dbf692a19c97351"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/fix.mjs",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/fix.mjs",
+    "bytes": 5464,
+    "sha256": "644fffd4a9573d9117c9cc9e17e610599d05b3011d6f301efaab2151abc719fd"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/palette.json",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/palette.json",
+    "bytes": 339,
+    "sha256": "6074afe413b2a69efcf6ac07ba7352741007f903c6f525c90e91c758119fc20e"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/render.mjs",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/render.mjs",
+    "bytes": 1866,
+    "sha256": "9909a51b3bbc670287b8b273e2e0281405a4bf683749eb19886b25f7444c43f2"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/sheet.mjs",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/sheet.mjs",
+    "bytes": 3307,
+    "sha256": "6da006fa001e2002f1db9d3e5dc84b4e99b53181e6f62062db5bac6a9ede299c"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/sprite-96.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/sprite-96.png",
+    "bytes": 1662,
+    "sha256": "48f244b4fa1217c408a3cfba9aafbe0c49010d5cf58753100fb9967d3945c5c7"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/sprite-96.txt",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/cleanup/sprite-96.txt",
+    "bytes": 5568,
+    "sha256": "fdf22d6d514a9ffef30e4138c17bf2880426e2defc6a1e3de3f84773359eaac4"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test-64px-native.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test-64px-native.png",
+    "bytes": 1509,
+    "sha256": "207389672a3dc0dd922c4ecee7cc5d097814fb8f4cef15284df844a72bbf739e"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test-80px-native.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test-80px-native.png",
+    "bytes": 1974,
+    "sha256": "bc1fa90a53864e89ca773b600f9e019fff96883a211be125dde5dc801defba3b"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test-96px-native.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test-96px-native.png",
+    "bytes": 2493,
+    "sha256": "2c1fe12c8f14b6ab4ba20035e863b60407d7f3042ead173392d0b65bd2be3d52"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-96px-cleanup-unsuccessful/studies/01-sprite-height-test.png",
+    "bytes": 359078,
+    "sha256": "76c14aef207e48debdd17258592f3e941f35201e1e508d108563033360b812d4"
+  },
+  {
+    "path": "character-dev/004/explorations/archive/2026-10-20-motion-test-001-early/index.html",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/archive/2026-10-20-motion-test-001-early/index.html",
+    "bytes": 5842,
+    "sha256": "ec0520e2774294f3f27288bc55c0ba6def6aaa169f79ae60c97845381f699989"
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-expression-02-smile.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-expression-02-smile.webp",
+    "bytes": 54564,
+    "sha256": "7803ff2ae3356a6e00f95601598fae0bc87641cd9cab81de3f3b940a540ad943"
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-expression-03-singing.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-expression-03-singing.webp",
+    "bytes": 58630,
+    "sha256": "917e04aaba15569590ce1bc62b51ab8c3c61fc56538e943834576ba520a7195d"
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-seated-01-neutral.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-seated-01-neutral.webp",
+    "bytes": 81718,
+    "sha256": "9415135f2c06247c6a6f6020ddbe2d9d1ceda462fbcb736efc0420641e4fe1b6"
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-seated-02-smile.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-seated-02-smile.webp",
+    "bytes": 83484,
+    "sha256": "639862b91ed6e3ed0c877b4f558984ac4ce5680b6d52e20cfd08b49516cc7a97"
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-seated-03-singing.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-seated-03-singing.webp",
+    "bytes": 83952,
+    "sha256": "8f28decbe08254b8568f5a160072780a7f7d36b0f5946684c854565854e8b30d"
+  },
+  {
+    "path": "character-dev/004/explorations/chatgpt/07-soulful-artist-crop.webp",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/chatgpt/07-soulful-artist-crop.webp",
+    "bytes": 33088,
+    "sha256": "f2b2c7132cf15a242f1038acfeb331341c8db9cb9b592192da6b217913288aaa"
+  },
+  {
+    "path": "character-dev/004/explorations/expression-study-001/expression-study-001.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/explorations/expression-study-001/expression-study-001.png",
+    "bytes": 3698782,
+    "sha256": "67bf0204e974f26d8351e808098eca11aa9609b7640a6d851c517fd81ced31d8"
+  },
+  {
+    "path": "character-dev/004/key-pose-study-001/HANDOFF.md",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/key-pose-study-001/HANDOFF.md",
+    "bytes": 7314,
+    "sha256": "ee3c822193b8b6a6c9c041d202d44c0d45e5dff6b909eaf964b3a4840e694597"
+  },
+  {
+    "path": "character-dev/004/references/original-art/01-floating-balloons.jpeg",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/references/original-art/01-floating-balloons.jpeg",
+    "bytes": 933921,
+    "sha256": "ba7a51b9d1d5ca3e85137ab71573145c1f0f541635bec18adde2198e43c31f64"
+  },
+  {
+    "path": "character-dev/004/references/original-art/02-seated-guitar.png",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/references/original-art/02-seated-guitar.png",
+    "bytes": 126253,
+    "sha256": "38e55745d55051255d97451231af2ed8df2273d568e8addc98b487f5cd4fae56"
+  },
+  {
+    "path": "character-dev/004/references/original-art/03-bama-cowboy-pony.jpg",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/references/original-art/03-bama-cowboy-pony.jpg",
+    "bytes": 463552,
+    "sha256": "5402832979b74cdce7b506b449d87d0b8552102f758438729d9ece27de20c99b"
+  },
+  {
+    "path": "character-dev/004/references/original-art/04-summer-nights-boombox.jpg",
+    "source": "/Users/colecalfee/Sites/kc/character-dev/004/references/original-art/04-summer-nights-boombox.jpg",
+    "bytes": 161849,
+    "sha256": "ebcb9335bd4fc9cd1d30e194680a66c678d6d9bcdc15b4fb61f51ade3ad68c12"
+  },
+  {
+    "path": "film/pour-me-out/README.md",
+    "source": "/Users/colecalfee/Sites/kc/film/pour-me-out/README.md",
+    "bytes": 1075,
+    "sha256": "a8dcb86461b458856606bb0f3db93981ebb23458803c21d3abdc889695109b4a"
+  },
+  {
+    "path": "film/pour-me-out/audio/README.md",
+    "source": "/Users/colecalfee/Sites/kc/film/pour-me-out/audio/README.md",
+    "bytes": 343,
+    "sha256": "f4bb8ebcab87e191feb3528a5fd3d57200bd0644083fba2d11215671245199f5"
+  },
+  {
+    "path": "film/pour-me-out/index.html",
+    "source": "/Users/colecalfee/Sites/kc/film/pour-me-out/index.html",
+    "bytes": 22498,
+    "sha256": "e8857282a47c0decb8cf06d928158fbc18ff26961e43db210f9ae14791903735"
+  },
+  {
+    "path": "film/pour-me-out/shots/SH010-arrival/README.md",
+    "source": "/Users/colecalfee/Sites/kc/film/pour-me-out/shots/SH010-arrival/README.md",
+    "bytes": 1254,
+    "sha256": "a0e28dcb9cfb467ede6792aa29be227b08a41116b5ea121662e6f1eb8eb81476"
+  },
+  {
+    "path": "film/pour-me-out/shots/SH010-arrival/boards/.gitkeep",
+    "source": "/Users/colecalfee/Sites/kc/film/pour-me-out/shots/SH010-arrival/boards/.gitkeep",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
