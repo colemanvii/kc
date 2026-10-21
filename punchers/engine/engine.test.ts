@@ -146,7 +146,7 @@ test('episode: the performance runs straight through cuts — no pose pops', () 
   }
 });
 
-test('episode: at the first frame KC is Jim\'s drawing at rest, and by the end the balloons have taken him out of frame', () => {
+test('episode: at the first frame KC is Cole\'s drawing at rest, and by the end the balloons have taken him out of frame', () => {
   const first = ep.frameAt(0);
   for (const d of first.drawables.filter((d) => d.id.startsWith('kc.'))) d.world.forEach((v, i) => near(v, IDENTITY[i], 1e-9));
   const last = ep.frameAt(ep.duration);
@@ -165,7 +165,7 @@ test('episode: re-timing the song moves every cut and cue with it', () => {
   assert.equal(faster.frameAt(faster.shots[1].secIn + 1e-6).shot.id, 'SH020');
 });
 
-test('episode: no shot enlarges Jim\'s pixels at the episode\'s delivery size', () => {
+test('episode: no shot enlarges Cole\'s pixels at the episode\'s delivery size', () => {
   const report = upsampleReport();
   for (const r of report) assert.ok(r.at720 <= 1, `${r.shot} upsamples ${r.at720.toFixed(2)}× at 720p`);
 });
@@ -272,7 +272,7 @@ test('frames are a pure function of time: random-order evaluation equals in-orde
   }
 });
 
-test('Jim\'s art is only ever moved, rotated and scaled uniformly — never stretched, sheared or recoloured', () => {
+test('Cole\'s art is only ever moved, rotated and scaled uniformly — never stretched, sheared or recoloured', () => {
   for (const e of [ep, pmo]) {
     const fps = e.spec.delivery.fps;
     for (let i = 0; i < e.duration * fps; i += 3) {
@@ -289,7 +289,7 @@ test('Jim\'s art is only ever moved, rotated and scaled uniformly — never stre
 test('swap: an approved pose drawing replaces its placeholder by data alone, at its own proportions', () => {
   const { spec, sources } = readEpisode('001-pour-me-out');
   const lib = structuredClone(sources.poses!['little-kc']);
-  // Stand-in for an approved file: Jim's floating drawing, which IS approved art.
+  // Stand-in for an approved file: Cole's floating drawing, which IS approved art.
   lib.poses.seated = { file: '/little-kc/derived/figure.png', size: [750, 800] };
   const swapped = compileEpisode(spec, { ...sources, poses: { 'little-kc': lib } });
   const kc = swapped.frameAt(1).drawables.find((d) => d.id === 'kc.seated')!;

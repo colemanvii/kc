@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 
 // PUNCHERS proof player: isolated from The Arrival site. Its own root
 // (punchers/proof); the repository's public/ is shared read-only so the rig
-// draws Jim's derived layers from the one place they live.
+// draws Cole's derived layers from the one place they live.
 export default defineConfig({
   root: fileURLToPath(new URL('./proof', import.meta.url)),
   publicDir: fileURLToPath(new URL('../public', import.meta.url)),

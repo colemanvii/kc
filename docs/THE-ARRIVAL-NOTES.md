@@ -8,7 +8,7 @@ The page is the sheet of paper. Nothing on it at first but the paper's grain and
 three stray specks from the original drawing. Then Little KC drifts down into frame
 beneath his two balloons, as if a breeze carried him in. He sinks a touch past his
 mark, the balloons lift him back, he bobs a few times, slower and smaller each time,
-and then he stops. The last frame is Jim's drawing exactly, pixel for pixel. There is
+and then he stops. The last frame is Cole's drawing exactly, pixel for pixel. There is
 no UI apart from a faint italic *again* that appears once he is still.
 
 ## Beats
@@ -88,7 +88,7 @@ extraction is faithful. From this flattened JPEG it isn't:
 
 So V1 moves the whole figure as a rigid piece, with physically motivated motion, plus
 the separately drawn ground line. **Independent balloon sway, string flex, hat motion
-or facial life need an editable layered source from Jim** (e.g. the original
+or facial life need an editable layered source from Cole** (e.g. the original
 Procreate/PSD file with balloons, strings, hat, head and body on separate layers).
 
 ## What works / what's rough / blockers

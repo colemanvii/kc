@@ -1,6 +1,6 @@
 # PUNCHERS — Episode Template
 
-Every episode is a folder of JSON that the engine compiles, the player previews and the exporter renders. Worked examples: `punchers/episodes/000-proof/` (Jim's real art, music-timed) and `punchers/episodes/001-pour-me-out/` (the approved ten-shot board, assets pending).
+Every episode is a folder of JSON that the engine compiles, the player previews and the exporter renders. Worked examples: `punchers/episodes/000-proof/` (Cole's real art, music-timed) and `punchers/episodes/001-pour-me-out/` (the approved ten-shot board, assets pending).
 
 ## Folder
 
@@ -57,7 +57,7 @@ public/punchers/…                                     approved image and audio
   } },
   "staging": { "defaults": { "kc.y": 1300, "kc.h": 300 }, "keys": { "kc.x": [{ "at": "14s", "v": 1500 }] } },
   "cast": { "kc": { "pose": "rear" } },
-  "missing": ["Jim's rear pose", "verified Ryman layout", "painted room"]
+  "missing": ["Cole's rear pose", "verified Ryman layout", "painted room"]
 }
 ```
 

@@ -8,7 +8,7 @@
 //
 // Every piece of artwork is addressed through a slot. A slot either names an
 // approved file, in which case the file is drawn, or names nothing, in which case a
-// labelled placeholder is drawn in its place. Swapping in Jim's poses, the Ryman
+// labelled placeholder is drawn in its place. Swapping in Cole's poses, the Ryman
 // paintings or the song is an edit to JSON, never to code; placeholders are never
 // a stand-in drawing of the character or the venue.
 //
@@ -325,7 +325,7 @@ export function compileEpisode(spec: EpisodeSpec, src: EpisodeSources): Episode 
         drawables.push(
           pose.file
             ? { id: `${c.name}.${poseId}`, kind: 'sprite', file: url(c.poses!.assetBase, pose.file), rect, world: [...IDENTITY] as Affine, z: c.z, opacity }
-            : { id: `${c.name}.${poseId}`, kind: 'placeholder', file: '', rect, world: [...IDENTITY] as Affine, z: c.z, opacity, role: 'character', label: `${c.poses!.character} · ${poseId}: awaiting Jim's drawing` },
+            : { id: `${c.name}.${poseId}`, kind: 'placeholder', file: '', rect, world: [...IDENTITY] as Affine, z: c.z, opacity, role: 'character', label: `${c.poses!.character} · ${poseId}: awaiting Cole's drawing` },
         );
       }
       // Far to near; stable for equal depth, so authored order breaks ties.

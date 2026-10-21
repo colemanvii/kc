@@ -1,4 +1,4 @@
-// Canvas 2D renderer for a frame description. Draws Jim's layers at their sheet
+// Canvas 2D renderer for a frame description. Draws Cole's layers at their sheet
 // placement through the camera; never filters, recolours or resamples them beyond
 // the one affine draw the camera needs.
 

@@ -1,4 +1,4 @@
-// Fidelity gate for a character rig: proves every part is Jim's drawing, uncut and
+// Fidelity gate for a character rig: proves every part is Cole's drawing, uncut and
 // unredrawn, before anything is animated with it.
 //
 // For each part with a drawing:
@@ -10,7 +10,7 @@
 //     shown by some part, so nothing of the drawing has been left behind.
 //
 // Usage: node punchers/scripts/verify-rig.mjs [character]     (default little-kc)
-// Exits non-zero on any failure. Run it on every new rig and every re-export from Jim.
+// Exits non-zero on any failure. Run it on every new rig and every re-export from Cole.
 
 import sharp from 'sharp';
 import { readFile } from 'node:fs/promises';

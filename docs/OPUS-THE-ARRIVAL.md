@@ -32,7 +32,7 @@ Choose a restrained, maintainable stack. Next.js + TypeScript + GSAP is acceptab
 - No deployment or merges without user approval
 
 ## Quality standard
-World-class, not merely functional. Judge negative space, scale, motion rhythm, visual hierarchy, texture, authenticity to the drawing, and the quality of the final resting frame. The character remains Jim's character. If better motion would require an editable layered source file, state that transparently instead of inventing character parts.
+World-class, not merely functional. Judge negative space, scale, motion rhythm, visual hierarchy, texture, authenticity to the drawing, and the quality of the final resting frame. The character remains Cole's character. If better motion would require an editable layered source file, state that transparently instead of inventing character parts.
 
 ## Coordination
 Astra may later take an independent motion-polish pass. Keep components understandable and modular; don't preemptively implement a large site or merch store. This is the first study, not the final Kashus website.

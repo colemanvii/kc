@@ -1,6 +1,6 @@
 # PUNCHERS — Production Architecture
 
-*An original animated music series by Kashus Culpepper, starring Little KC (character design: Jim).*
+*An original animated music series by Kashus Culpepper, starring Little KC (character design: Cole Calfee).*
 Branch `claude/punchers-production-system`. Nothing here is deployed or merged.
 
 ## 1. What the repository actually contains (audit, 18 Oct 2026)
@@ -16,7 +16,7 @@ Branch `claude/punchers-production-system`. Nothing here is deployed or merged.
 | Workstation tools | After Effects 2026, Media Encoder 2026, Photoshop 2026, Illustrator 2026, Chrome | **Blender and ffmpeg are not installed** |
 | External previs | Separate local review folder (outside this repo): approved 42 s ten-shot board, timing animatic, missing-assets register | Its `storyboard.json` is copied into `punchers/episodes/001-pour-me-out/source/` for provenance. That pass could not decode its character file; **this repo's master JPEG decodes and is verified** |
 
-## 2. The core decision: Jim's drawings are data, never re-made
+## 2. The core decision: Cole's drawings are data, never re-made
 
 Every frame of the show is assembled from approved drawings, never a re-drawing. The pipeline treats
 artwork the way a film lab treats negatives: verified at ingest, only ever transformed (moved,
@@ -58,7 +58,7 @@ Principles:
 
 | Stage | Tool | Why |
 |---|---|---|
-| Character drawings, poses, mouth shapes | **Jim's own tool** (Procreate/Photoshop), exported as layered PSD or per-layer PNG at ≥ 4K-ready resolution | The art is his. We ingest; we don't redraw |
+| Character drawings, poses, mouth shapes | **Cole's own tool** (Procreate/Photoshop), exported as layered PSD or per-layer PNG at ≥ 4K-ready resolution | The art is Cole’s. We ingest; we don't redraw |
 | Ingest + fidelity gate | `verify-rig.mjs` (Node + sharp) | Bit-exact proof before anything is animated |
 | Environments (Ryman) | **Painted layers** (Photoshop) from a verified reference package; **Blender** only for layout: measure the room, block camera paths, export plate positions/depths | Blender gives correct venue scale and lens geometry; the *look* stays painted and handmade. Blender is not installed yet |
 | Blocking, timing, animatic, camera | **This engine** (JSON + browser player) | Musically timed, versioned in git, reviewable by link, deterministic |
@@ -69,7 +69,7 @@ Principles:
 
 ## 5. Resolution: a real constraint, quantified
 
-The master is 1523 × 1536. The test suite reports how much Jim's pixels are enlarged at each shot's tightest framing (Episode 000):
+The master is 1523 × 1536. The test suite reports how much Cole's pixels are enlarged at each shot's tightest framing (Episode 000):
 
 | Shot | 720p | 1080p | 2160p |
 |---|---|---|---|
@@ -77,9 +77,9 @@ The master is 1523 × 1536. The test suite reports how much Jim's pixels are enl
 | SH020 medium | 0.84× | **1.26×** | **2.52×** |
 | SH030 high wide | 0.51× | 0.77× | 1.54× |
 
-Anything above 1.0× softens his linework. The board's closest shot (SH080, 85 mm) frames KC at 58% of frame height. At 2160p, KC needs to be drawn **≥ 1250 px tall** (≈ 4× the current figure). **Ask Jim for originals at the largest canvas he works at.**
+Anything above 1.0× softens the linework. The board's closest shot (SH080, 85 mm) frames KC at 58% of frame height. At 2160p, KC needs to be drawn **≥ 1250 px tall** (≈ 4× the current figure). **Ask Cole for originals at the largest canvas Cole works at.**
 
 ## 6. Status
 
-Working, tested and rendering: the engine, the browser player, frame export, the fidelity gate, Episode 000 (Jim's real art) and Episode 001 (the approved ten-shot board, all slots placeholder).
+Working, tested and rendering: the engine, the browser player, frame export, the fidelity gate, Episode 000 (Cole's real art) and Episode 001 (the approved ten-shot board, all slots placeholder).
 See `punchers/README.md` for commands, the swap guide and the full verification record.

@@ -1,6 +1,6 @@
 // PUNCHERS — artwork-preserving cut-out rig.
 //
-// A part is a piece of Jim's drawing, cut from the master without being redrawn:
+// A part is a piece of Cole's drawing, cut from the master without being redrawn:
 // its RGB pixels are the master's own, it remembers the rectangle it was cut from,
 // and it has a pivot. Parts form a hierarchy. Posing applies, per part,
 //
@@ -134,7 +134,7 @@ export function createRig(spec: RigSpec): Rig {
         // Height above rest of the driving part's pivot, in master px (positive = up).
         const height = -ch(d.from, 'ty');
         const u = Math.min(1, Math.max(0, height / d.range));
-        // Uniform: the drawn line grows as a whole, never stretched out of Jim's proportions.
+        // Uniform: the drawn line grows as a whole, never stretched out of Cole's proportions.
         const k = height > 0 ? 1 + d.widen * u : 1 - 0.0025 * Math.min(-height, 20);
         derived.set(`${d.part}.sx`, k);
         derived.set(`${d.part}.sy`, k);
@@ -160,7 +160,7 @@ export function createRig(spec: RigSpec): Rig {
         worlds.set(p.id, world);
         opac.set(p.id, opacity);
       }
-      // Draw order is the spec's order (painter's order Jim's layers came in).
+      // Draw order is the spec's order (painter's order Cole's layers came in).
       for (const p of spec.parts) out.push({ id: p.id, drawing: p.drawing, world: worlds.get(p.id)!, opacity: opac.get(p.id)!, z: p.z ?? 0 });
       return out;
     },

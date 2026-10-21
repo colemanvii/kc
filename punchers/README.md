@@ -2,7 +2,7 @@
 
 Engine, review player and exporter for the PUNCHERS episodes. Architecture: [`../PUNCHERS_PRODUCTION.md`](../PUNCHERS_PRODUCTION.md) · Character: [`../CHARACTER_PIPELINE.md`](../CHARACTER_PIPELINE.md) · Episode spec and asset swapping: [`../EPISODE_TEMPLATE.md`](../EPISODE_TEMPLATE.md).
 
-Isolated from *The Arrival*: no existing file is modified, no dependencies are added. It reads Jim's derived layers from `public/little-kc/derived/` and leaves them alone.
+Isolated from *The Arrival*: no existing file is modified, no dependencies are added. It reads Cole's derived layers from `public/little-kc/derived/` and leaves them alone.
 
 ## Run
 
@@ -24,14 +24,14 @@ proof/        index.html · main.ts · render.ts (Canvas 2D) · transport.ts (au
 scripts/      verify-rig.mjs · render-frames.mjs
 characters/   little-kc/rig.json (cut-out rig) · little-kc/poses.json (pose library)
 environments/ jims-sheet (real) · ryman-backstage · ryman-reveal · ryman-house · ryman-mic (blockouts)
-episodes/     000-proof (Jim's art, 3 shots) · 001-pour-me-out (approved 10-shot board)
+episodes/     000-proof (Cole's art, 3 shots) · 001-pour-me-out (approved 10-shot board)
 ```
 
 ## What is visually real vs placeholder
 
 | | Real | Placeholder |
 |---|---|---|
-| **000-proof** | Jim's drawing (figure, ground line, specks, paper), pixel-verified; camera moves; cuts; beat-locked float and sway; the lift | Tempo (76 → 70 bpm) and the click: no song exists in the repo |
+| **000-proof** | Cole's drawing (figure, ground line, specks, paper), pixel-verified; camera moves; cuts; beat-locked float and sway; the lift | Tempo (76 → 70 bpm) and the click: no song exists in the repo |
 | **001-pour-me-out** | Shot order, exact timings (4/3/4/3/5/5/5/4/3/6 s = 42 s, 1008 frames), lenses, camera moves, staging marks, KC's on-screen scale per the approved board, the reveal parallax, the end retreat and fade | **Everything drawn**: every KC pose is a dashed red bracket labelled with the drawing it waits for; every set piece is a labelled grey depth card. No character or venue art is invented. Tempo (60 bpm) is a stand-in, so bar numbers show as `~` |
 
 ## Verification record (18 Oct 2026, this branch)
@@ -58,7 +58,7 @@ Not verified here: real-time playback judged by eye on target devices (the in-ap
 
 ## Blockers
 
-1. **Jim's drawings** for Episode 001: seated, stand, walk keys, rear, sing, hand-open, release (+ mouth shapes), at ≥ 1250 px character height. Ideally also the layered original of the floating drawing.
+1. **Cole's drawings** for Episode 001: seated, stand, walk keys, rear, sing, hand-open, release (+ mouth shapes), at ≥ 1250 px character height. Ideally also the layered original of the floating drawing.
 2. **The recording** of *Pour Me Out*, the chosen excerpt (`audio.offset`), and its measured beat-times.
 3. **Ryman reference package** (stage-to-house, house-to-stage, balcony, pews, wings), then painted plates.
 4. Blender (layout) and ffmpeg (optional encode) are not installed. After Effects and Media Encoder are.

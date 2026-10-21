@@ -1,6 +1,6 @@
 # Little KC — Character Pipeline
 
-How Jim's artwork gets onto the screen without ever being redrawn, approximated or distorted.
+How Cole's artwork gets onto the screen without ever being redrawn, approximated or distorted.
 
 ## 1. What the current character layers are (answering this plainly)
 
@@ -38,12 +38,12 @@ OK
 ### B. Pose library (`characters/<name>/poses.json`): for replacement (drawing-swap) animation
 - One entry per approved drawing: `file`, its pixel `size`, `anchor` (default: feet), notes.
 - A shot picks a pose (`"cast": { "kc": { "pose": "sing" } }`); staging sets where (`kc.x`, `kc.y`) and how tall (`kc.h`). Width is always `h × (size.w / size.h)`, so the drawing keeps its own proportions.
-- `file: null` → a dashed, labelled bracket ("Little KC · rear: awaiting Jim's drawing"). Never a silhouette or stand-in.
-- Walks, singing and mouth sync are sequences of approved drawings (keys + in-betweens Jim draws or approves), swapped on the beat grid. **Mesh warping and puppet deformation of Jim's art are out of scope by design.**
+- `file: null` → a dashed, labelled bracket ("Little KC · rear: awaiting Cole's drawing"). Never a silhouette or stand-in.
+- Walks, singing and mouth sync are sequences of approved drawings (keys + in-betweens Cole draws or approves), swapped on the beat grid. **Mesh warping and puppet deformation of Cole's art are out of scope by design.**
 
 Current library: `floating` (approved, the master figure) plus `seated`, `stand`, `walk`, `rear`, `sing`, `hand-open`, `release`, all **missing**.
 
-## 3. What to ask Jim for (in priority order)
+## 3. What to ask Cole for (in priority order)
 
 1. **The original working file** of the floating drawing (Procreate/PSD) with the balloons, strings, hat, head, body and arms on separate layers, at full canvas resolution. That unlocks balloon sway, string flex, hat motion and head turns on the drawing we already have.
 2. **Episode 001 pose drawings**, per the approved board: seated on stool; standing (profile and front); walk keys (contact, passing, both feet); rear view at the threshold; singing at mic; close-up with chin lift and open hand; release.
@@ -51,10 +51,10 @@ Current library: `floating` (approved, the master figure) plus `seated`, `stand`
 4. **Resolution:** KC ≥ 1250 px tall for 2160p close-ups (see `PUNCHERS_PRODUCTION.md` §5).
 5. **Format:** layered PSD, or one PNG per layer with a shared canvas size and **no** trimming, so every layer keeps its registration. Straight alpha. sRGB. Plus a flattened reference export of the same file: the verify gate compares every layer against it.
 
-## 4. Ingest procedure (each delivery from Jim)
+## 4. Ingest procedure (each delivery from Cole)
 
 1. Commit the untouched originals under `art/source/<date>-<description>/` (never edited; LFS if large).
 2. Export layers 1:1 (no resample) to `public/punchers/characters/little-kc/…`.
 3. Write the part rectangles or pose entries (`rig.json` / `poses.json`) with each file's exact pixel size.
 4. Run `node punchers/scripts/verify-rig.mjs` and `node --test "punchers/**/*.test.ts"`. Both must pass.
-5. Render a review sheet (`render-frames.mjs --episode … --contact`). Jim signs off on the sheet before animation polish.
+5. Render a review sheet (`render-frames.mjs --episode … --contact`). Cole signs off on the sheet before animation polish.

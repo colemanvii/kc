@@ -15,14 +15,14 @@ Nothing in this document requires changing `punchers/engine/`, `punchers/proof/`
 | Time | 14.000 – 19.000 s · frames **336 – 455** (120 frames @ 24 fps) |
 | Board direction | "Hold Little KC small. Let the room open in layers. Slow forward creep past curtain." 28 mm |
 | Environment | `punchers/environments/ryman-reveal/environment.json` (3 slots: `house`, `stage`, `curtain`) |
-| Character | `kc` in pose `rear`: Jim's rear-view drawing (**missing**; see §3) |
+| Character | `kc` in pose `rear`: Cole's rear-view drawing (**missing**; see §3) |
 | Camera (as approved in the blockout) | x 2922.2 → 3012.2, y 416.7, frame 3333.3 → 2866.7 (inOutSine), lens 28 mm = 28.07° vertical |
 
 **Definition of done**
 1. `house`, `stage` and `curtain` slots hold approved Ryman paintings (§1). No labelled grey cards remain in frames 336–455.
 2. Every backdrop plate covers the full frame for all 120 frames (coverage table in §2.4). No bare ground shows at any edge.
 3. The curtain leg clears the frame as the camera creeps forward. It reads as the nearest layer, with the room opening behind it.
-4. KC is either Jim's approved `rear` drawing, or the labelled bracket if that drawing hasn't arrived yet. The test can be judged as an environment reveal first. **Never a stand-in figure.**
+4. KC is either Cole's approved `rear` drawing, or the labelled bracket if that drawing hasn't arrived yet. The test can be judged as an environment reveal first. **Never a stand-in figure.**
 5. The full gate (§5.3) passes, and the review sheet `punchers/episodes/001-pour-me-out/review/shots.jpg` is regenerated and approved.
 
 ---
@@ -84,7 +84,7 @@ The blockout planes were sized for labels, not for full coverage. The SH050 hous
 
 ### 2.1 Coordinate system ("sheet px")
 
-- One unit = one **sheet pixel**. Origin top-left; **x right, y down**. For Episode 000 a sheet pixel is exactly a pixel of Jim's master JPEG. For the Ryman sets it's an arbitrary layout unit: **KC standing ≈ 300 sheet px tall** is the reference scale every set uses.
+- One unit = one **sheet pixel**. Origin top-left; **x right, y down**. For Episode 000 a sheet pixel is exactly a pixel of Cole's master JPEG. For the Ryman sets it's an arbitrary layout unit: **KC standing ≈ 300 sheet px tall** is the reference scale every set uses.
 - Every plane is a flat card parallel to the screen, at depth **`z`** (sheet px, **positive = toward the camera**). The paper/stage reference plane is `z = 0`.
 - Cast depth: `kc` stands at `z = 20` (from `episode.json` → `cast.kc.z`).
 
@@ -138,7 +138,7 @@ The backstage numbers are large because one set serves both a 937-px-frame mediu
 
 ---
 
-## 3. Adding Jim's approved poses without touching the fidelity tests
+## 3. Adding Cole's approved poses without touching the fidelity tests
 
 ### 3.1 Why the fidelity tests are unaffected
 
@@ -148,7 +148,7 @@ The backstage numbers are large because one set serves both a 937-px-frame mediu
 ### 3.2 Where and how
 
 ```
-art/source/little-kc/<date>-<description>/   ← Jim's untouched originals (PSD / Procreate exports)
+art/source/little-kc/<date>-<description>/   ← Cole's untouched originals (PSD / Procreate exports)
 public/punchers/characters/little-kc/poses/rear.png
 public/punchers/characters/little-kc/poses/seated.png …
 ```
@@ -159,12 +159,12 @@ public/punchers/characters/little-kc/poses/seated.png …
   "file": "rear.png",
   "size": [1400, 2400],          // the file's exact pixel size (required)
   "anchor": [0.5, 0.97],         // the point (fractions of the image) that stands on the staging mark: KC's feet on the ground line
-  "note": "Jim, approved 2026-MM-DD. sha256 <hash of rear.png>"
+  "note": "Cole, approved 2026-MM-DD. sha256 <hash of rear.png>"
 }
 ```
 
-- **Export 1:1 from Jim's file.** No resampling, retouching or colour conversion. Record the file's SHA-256 in `note` (`shasum -a 256 rear.png`), so anyone can confirm the committed file is the one Jim approved.
-- **Model-sheet registration (strongly recommended):** ask Jim to draw every pose on the **same canvas size, at the same scale, with the same ground line**. Then every pose has the same `size` and `anchor`, and KC is the same height in every shot without per-pose tuning.
+- **Export 1:1 from Cole's file.** No resampling, retouching or colour conversion. Record the file's SHA-256 in `note` (`shasum -a 256 rear.png`), so anyone can confirm the committed file is the one Cole approved.
+- **Model-sheet registration (strongly recommended):** ask Cole to draw every pose on the **same canvas size, at the same scale, with the same ground line**. Then every pose has the same `size` and `anchor`, and KC is the same height in every shot without per-pose tuning.
 - The engine draws the pose at height `kc.h` (sheet px, set in each shot's `staging`). Width always follows the file's own aspect ratio, so the drawing can't be distorted.
 
 ### 3.3 Keeping KC's on-screen scale as approved
@@ -305,7 +305,7 @@ npm test                                         # The Arrival: 6/6 + 173,670 st
 npm run build                                    # The Arrival builds
 npx tsc -p punchers                              # strict types
 node --test "punchers/**/*.test.ts"              # 32/32 at baseline
-node punchers/scripts/verify-rig.mjs             # Jim's master: bit-exact, 0 pixels missing
+node punchers/scripts/verify-rig.mjs             # Cole's master: bit-exact, 0 pixels missing
 node punchers/scripts/render-frames.mjs --episode 001-pour-me-out --contact   # no page errors; regenerates review sheets
 node punchers/scripts/render-frames.mjs --episode 000-proof --contact         # Episode 000 still renders
 ```
@@ -323,6 +323,6 @@ Baseline results at `10aa19e` are recorded in `punchers/README.md`. A PR that ch
 ## Open dependencies (unchanged from baseline)
 
 1. **Verified Ryman reference package** and the approved paintings for `ryman-reveal` (house, stage, curtain), then the other three sets.
-2. **Jim's `rear` drawing** (for SH050), then seated, stand, walk keys, sing, hand-open, release, at ≥ 1250 px character height for 2160p close-ups.
+2. **Cole's `rear` drawing** (for SH050), then seated, stand, walk keys, sing, hand-open, release, at ≥ 1250 px character height for 2160p close-ups.
 3. **The recording**, the chosen excerpt (`offset`), and its signed-off beat list.
 4. Blender (venue layout) is not installed. After Effects and Media Encoder are.

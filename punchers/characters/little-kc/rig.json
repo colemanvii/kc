@@ -51,7 +51,7 @@
     }
   ],
   "notCharacter": {
-    "reason": "Stray specks on Jim's sheet inside KC's bounds. They stay with the paper and are carried by environments/jims-sheet, not the rig.",
+    "reason": "Stray specks on Cole's sheet inside KC's bounds. They stay with the paper and are carried by environments/jims-sheet, not the rig.",
     "rects": [
       {
         "x": 446,
