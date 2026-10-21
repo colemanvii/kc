@@ -15,7 +15,7 @@ A home for Little KC character animation, *The Arrival*, interactive web experie
 
 ## The Arrival (first study)
 
-Little KC drifts down onto the paper beneath his two balloons, settles, and comes to rest exactly as Jim drew him.
+Little KC drifts down onto the paper beneath his two balloons, settles, and comes to rest exactly as Cole Calfee drew him.
 Concept, beats, easing, layer extraction and an honest status report: **[docs/THE-ARRIVAL-NOTES.md](docs/THE-ARRIVAL-NOTES.md)**.
 Brief: [docs/OPUS-THE-ARRIVAL.md](docs/OPUS-THE-ARRIVAL.md).
 
